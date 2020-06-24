@@ -56,7 +56,7 @@ class LocalizeStringKit {
     /// - Parameter content: 查找的每一行字符串
     func findKeyValue(content:String) {
         /* 通过=符号切割字符串 */
-        var list = content.components(separatedBy: "=")
+        let list = content.components(separatedBy: "=")
         /* 如果数组的总数不等于2 则代表有问题 直接退出查找 */
         guard list.count == 2 else {
             return

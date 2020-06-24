@@ -11,14 +11,14 @@ import Cocoa
 /* 查找工程存在的多语言 */
 class FindLocalizeStringController: NSViewController, NSTableViewDataSource {
     /* 显示查找的状态 */
-    @IBOutlet weak var stateLabel: NSTextField!
+    @IBOutlet var stateLabel: NSTextField!
     /* 超找出来结果的表格 */
-    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet var tableView: NSTableView!
     /* 显示正在查找的路径地址 */
-    @IBOutlet weak var filePathLabel: NSTextField!
+    @IBOutlet var filePathLabel: NSTextField!
     
     /* 显示超找的总数量 */
-    @IBOutlet weak var countLabel: NSTextField!
+    @IBOutlet var countLabel: NSTextField!
     /* 查找管理器的单利对象 */
     let findKit:FindLocalizeStringKit = FindLocalizeStringKit.shareManager()
     /* 需要查找的路径 */
@@ -36,13 +36,17 @@ class FindLocalizeStringController: NSViewController, NSTableViewDataSource {
         self.stateLabel.stringValue = "正在查找..."
         /* 查找管理器查找完成的回调 */
         findKit.completionLog = {log in
-            self.filePathLabel.stringValue = log
+            DispatchQueue.main.async {
+                self.filePathLabel.stringValue = log
+            }
         }
         /* 查找管理器查找一组最新的数据回调 */
         findKit.updateCompletion = { key, value in
-            self.keys.append(key)
-            self.tableView.reloadData()
-            self.countLabel.stringValue = "\(self.keys.count)"
+            DispatchQueue.main.async {
+                self.keys.append(key)
+                self.tableView.reloadData()
+                self.countLabel.stringValue = "\(self.keys.count)"
+            }
         }
         DispatchQueue.global().async {
             FindLocalizeStringKit.shareManager().findAllLocalizeString(path: path)
@@ -64,25 +68,27 @@ class FindLocalizeStringController: NSViewController, NSTableViewDataSource {
         }
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(nil)
+    }
     @IBAction func export(_ sender: Any) {
-        let openPannel = NSOpenPanel()
-        openPannel.canChooseFiles = false
-        openPannel.canChooseDirectories = true
-        guard openPannel.runModal() == NSFileHandlingPanelOKButton else {
-            return
-        }
-        guard let path = openPannel.urls.first?.absoluteString.replacingOccurrences(of: "file://", with: "") else {
-            return
-        }
         var content = ""
-        for c in FindLocalizeStringKit.shareManager().list.enumerated() {
-            guard c.element.value.count > 0 else {
+        
+        let keys = FindLocalizeStringKit.shareManager().list.keys.sorted(by: { (name1, name2) -> Bool in
+            return name1.localizedStandardCompare(name2) == ComparisonResult.orderedAscending
+        })
+        for c in keys.enumerated() {
+            let key = c.element
+            
+            guard let value = FindLocalizeStringKit.shareManager().list[key], value.count > 0 else {
                 continue
             }
-            content += "\"\(c.element.key)\" = \"\(c.element.value)\";\n"
+            content += "\"\(key)\" = \"\(value)\";\n"
         }
 //        content = content.replacingOccurrences(of: "\\", with: "\\\\")
-        try? content.write(toFile: "\(path)/Localizable.strings", atomically: true, encoding: String.Encoding.utf8)
+        let filePath = SettingModel.shareSettingModel().languagePath(code: "en")
+        
+        try? content.write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8)
         self.dismiss(nil)
     }
     

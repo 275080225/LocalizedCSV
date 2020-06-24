@@ -14,7 +14,7 @@ class LanguageValueController: NSViewController, NSTableViewDataSource, NSTableV
     var keys:[String] = []
     var verifyCount = 0
 
-    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet var tableView: NSTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class LanguageValueController: NSViewController, NSTableViewDataSource, NSTableV
         let openPannel = NSOpenPanel()
         openPannel.canChooseFiles = false
         openPannel.canChooseDirectories = true
-        guard openPannel.runModal() == NSFileHandlingPanelOKButton else {
+        guard openPannel.runModal() == NSApplication.ModalResponse.OK else {
             return
         }
         guard let path = openPannel.urls.first?.absoluteString.replacingOccurrences(of: "file://", with: "") else {
@@ -83,7 +83,7 @@ class LanguageValueController: NSViewController, NSTableViewDataSource, NSTableV
         let openPannel = NSOpenPanel()
         openPannel.canChooseFiles = false
         openPannel.canChooseDirectories = true
-        guard openPannel.runModal() == NSFileHandlingPanelOKButton else {
+        guard openPannel.runModal() == NSApplication.ModalResponse.OK else {
             return
         }
         guard let path = openPannel.urls.first?.absoluteString.replacingOccurrences(of: "file://", with: "") else {
@@ -112,7 +112,7 @@ class LanguageValueController: NSViewController, NSTableViewDataSource, NSTableV
         let openPannel = NSOpenPanel()
         openPannel.canChooseFiles = false
         openPannel.canChooseDirectories = true
-        guard openPannel.runModal() == NSFileHandlingPanelOKButton else {
+        guard openPannel.runModal() == NSApplication.ModalResponse.OK else {
             return
         }
         guard let path = openPannel.urls.first?.absoluteString.replacingOccurrences(of: "file://", with: "") else {
@@ -217,7 +217,7 @@ class LanguageValueController: NSViewController, NSTableViewDataSource, NSTableV
         let openPannel = NSOpenPanel()
         openPannel.canChooseFiles = false
         openPannel.canChooseDirectories = true
-        guard openPannel.runModal() == NSFileHandlingPanelOKButton else {
+        guard openPannel.runModal() == NSApplication.ModalResponse.OK else {
             return nil
         }
         guard let path = openPannel.urls.first?.absoluteString.replacingOccurrences(of: "file://", with: "") else {
@@ -232,13 +232,13 @@ class LanguageValueController: NSViewController, NSTableViewDataSource, NSTableV
     }
     
     public func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        var key = LCFormatterKey(key: keys[row])
+        let key = LCFormatterKey(key: keys[row])
         guard let column = tableColumn, let cell = column.dataCell as? NSTextFieldCell else {
             return nil
         }
         cell.drawsBackground = true
         let isEn = self.item!.name == "母文本English"
-        var value = findValue(key: key, list: isEn ? FindLocalizeStringKit.shareManager().list : nil)
+        let value = findValue(key: key, list: isEn ? FindLocalizeStringKit.shareManager().list : nil)
         if column.title == "Key" {
             cell.backgroundColor = NSColor.darkGray
             if isEn && key != value! {
@@ -253,7 +253,7 @@ class LanguageValueController: NSViewController, NSTableViewDataSource, NSTableV
                 cell.backgroundColor = NSColor.red
             } else {
                 if let v = value, v.count > 0 {
-                    cell.backgroundColor = NSColor.green
+                    cell.backgroundColor = NSColor.darkGray
                 } else {
                     cell.backgroundColor = NSColor.yellow
                 }
@@ -290,7 +290,7 @@ class LanguageValueController: NSViewController, NSTableViewDataSource, NSTableV
     }
     
     func findValue(key:String, list:[String:String]?) -> String? {
-        var _list = list ?? self.item?.list
+        let _list = list ?? self.item?.list
         var _value:String?
         findKeyValue(key: key, list: _list!) { (value, index, fixKey) -> String? in
             if let _ = value {

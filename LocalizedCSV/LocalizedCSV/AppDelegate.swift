@@ -26,7 +26,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func findProjLocalizeString() {
-        guard let path = FileKit.getDirectory() else {
+        guard let path = SettingModel.shareSettingModel().projectRootPath else {
+            let alert = NSAlert()
+            alert.messageText = "还未选择工程路径"
+            alert.runModal()
             return
         }
         guard let rootController = NSApp.mainWindow?.contentViewController else {
@@ -36,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
         controller.findPath = path
-        rootController.presentViewControllerAsSheet(controller)
+        rootController.presentAsSheet(controller)
         
     }
     

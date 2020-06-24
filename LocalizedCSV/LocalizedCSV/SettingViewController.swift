@@ -10,11 +10,11 @@ import Cocoa
 
 class SettingViewController: NSViewController {
 
-	@IBOutlet weak var languageCodeTextView:NSTextView!
-    @IBOutlet weak var searchLocalizetionPrefix:NSTextField!
-    @IBOutlet weak var filterLocalizeNameTextView:NSTextView!
-    @IBOutlet weak var checkPlaceholderTextView:NSTextView!
-    @IBOutlet weak var fixValueTextView:NSTextView!
+	@IBOutlet var languageCodeTextView:NSTextView!
+    @IBOutlet var searchLocalizetionPrefix:NSTextField!
+    @IBOutlet var filterLocalizeNameTextView:NSTextView!
+    @IBOutlet var checkPlaceholderTextView:NSTextView!
+    @IBOutlet var fixValueTextView:NSTextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let setting = SettingModel.shareSettingModel()
@@ -26,8 +26,8 @@ class SettingViewController: NSViewController {
     }
 
     @IBAction func save(_ sender:NSButton) {
-        if let text = self.languageCodeTextView.string {
-            let textList = text.components(separatedBy: "\n")
+        if self.languageCodeTextView.string.count>0 {
+            let textList = self.languageCodeTextView.string.components(separatedBy: "\n")
             var textDic:[String:String] = [:]
             for text in textList.enumerated() {
                 let subList = text.element.components(separatedBy: ":")
@@ -41,19 +41,19 @@ class SettingViewController: NSViewController {
         if self.searchLocalizetionPrefix.stringValue.count > 0 {
             SettingModel.shareSettingModel().searchLocalizetionPrefix = self.searchLocalizetionPrefix.stringValue
         }
-        
-        if let text = self.filterLocalizeNameTextView.string {
-            let textList = text.components(separatedBy: "\n")
+        let filterText = self.filterLocalizeNameTextView.string
+        if filterText.count>0 {
+            let textList = self.languageCodeTextView.string.components(separatedBy: "\n")
             SettingModel.shareSettingModel().filterLocalizedNames = textList
         }
         
-        if let text = self.checkPlaceholderTextView.string {
-            let textList = text.components(separatedBy: "\n")
+        if self.checkPlaceholderTextView.string.count>0 {
+            let textList = self.checkPlaceholderTextView.string.components(separatedBy: "\n")
             SettingModel.shareSettingModel().checkPlaceholders = textList
         }
         
-        if let text = self.fixValueTextView.string {
-            let textList = text.components(separatedBy: "\n")
+        if self.fixValueTextView.string.count>0 {
+            let textList = self.fixValueTextView.string.components(separatedBy: "\n")
             var textDic:[String:String] = [:]
             for text in textList.enumerated() {
                 let subList = text.element.components(separatedBy: ":")
@@ -64,21 +64,36 @@ class SettingViewController: NSViewController {
             }
             SettingModel.shareSettingModel().fixValues = textDic
         }
-        
         SettingModel.shareSettingModel().save()
-        
     }
-    
-    
-    
-    
 }
 
 let settingModel = SettingModel()
 
 class SettingModel {
-
-	var projectRootPath:String?
+    
+    var projectRootPath:String?{
+        didSet{
+            let userDefault = UserDefaults.standard
+            userDefault.set(projectRootPath, forKey: "projectRootPath")
+            userDefault.synchronize()
+        }
+    }
+    
+    var projectLanguagePath:String?{
+        didSet{
+            let userDefault = UserDefaults.standard
+            userDefault.set(projectLanguagePath, forKey: "projectLanguagePath")
+            userDefault.synchronize()
+        }
+    }
+    var csvPath:String?{
+        didSet{
+            let userDefault = UserDefaults.standard
+            userDefault.set(csvPath, forKey: "csvPath")
+            userDefault.synchronize()
+        }
+    }
 
 	var projectLanguageCode:[String:String] = [:]
     
@@ -103,6 +118,15 @@ class SettingModel {
         if let checkPlaceholders = UserDefaults.standard.object(forKey: "checkPlaceholders") as? [String]  {
             self.checkPlaceholders = checkPlaceholders
         }
+        if let projectRootPath = UserDefaults.standard.object(forKey: "projectRootPath") as? String  {
+            self.projectRootPath = projectRootPath
+        }
+        if let projectLanguagePath = UserDefaults.standard.object(forKey: "projectLanguagePath") as? String  {
+            self.projectLanguagePath = projectLanguagePath
+        }
+        if let csvPath = UserDefaults.standard.object(forKey: "csvPath") as? String  {
+            self.csvPath = csvPath
+        }
         
         if let searchLocalizetionPrefix = UserDefaults.standard.object(forKey: "searchLocalizetionPrefix") as? String {
             if searchLocalizetionPrefix.count > 0 {
@@ -114,7 +138,7 @@ class SettingModel {
 	class func shareSettingModel() -> SettingModel {
 		return settingModel
 	}
-
+    
     func save() {
         let userDefault = UserDefaults.standard
         userDefault.set(self.projectLanguageCode, forKey: "projectLanguageCode")
@@ -124,7 +148,17 @@ class SettingModel {
         userDefault.set(self.fixValues, forKey: "fixValues")
         userDefault.synchronize()
     }
-
+    
+    func languagePath(code:String) -> String {
+        guard let projectLanguagePath = SettingModel.shareSettingModel().projectLanguagePath else {
+            return ""
+        }
+        guard projectLanguagePath.count>0 else {
+            return ""
+        }
+        return "\(projectLanguagePath)\(code).lproj/Localizable.strings"
+    }
+    
 	func languageCodeString() -> String {
 		return transferMapToString(map: self.projectLanguageCode)
 	}

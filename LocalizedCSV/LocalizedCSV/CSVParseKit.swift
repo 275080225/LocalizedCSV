@@ -53,10 +53,10 @@ class CSVParseKit {
             throw CSVParseKitError.fileError
         }
         /* 获取 CSV 中的内容 */
-        var csvContent = try String(contentsOfFile: file)
+        let csvContent = try String(contentsOfFile: file)
 //        print(csvContent)
         /* 按照\r\n 切割内容为一个数组 */
-        var csvLines = csvContent.components(separatedBy: "\r\n")
+        let csvLines = csvContent.components(separatedBy: "\r\n")
         /* 如果切割不出来则抛出异常 */
         guard csvLines.count > 0 else {
             throw CSVParseKitError.fileError

@@ -11,7 +11,7 @@ import Cocoa
 
 class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
-    @IBOutlet weak var tableView: NSTableView! {
+    @IBOutlet var tableView: NSTableView! {
         didSet {
             /* 如果 TableView 已经初始化则 添加 Cell 双击事件 */
             self.tableView.target = self
@@ -21,28 +21,57 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     /* 是否可以刷新数据 */
     var canReadloadData = false
     /* 显示 CSV 的路径 */
-    @IBOutlet weak var csvTextFiled: NSTextField!
+    @IBOutlet var csvTextFiled: NSTextField!
     /* 显示基础语言文件路径 */
-    @IBOutlet weak var localizeStringTextFiled: NSTextField!
+    @IBOutlet var localizeStringTextFiled: NSTextField!
+    /* 工程路径 */
+    @IBOutlet weak var projectRootPathTextFidld: NSTextField!
+    
     /* CSV 解析单利库 */
     let csvParse:CSVParseKit = CSVParseKit.shareManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let projectRootPath = SettingModel.shareSettingModel().projectRootPath {
+            self.projectRootPathTextFidld.stringValue = projectRootPath;
+        }
+        if let projectLanguagePath = SettingModel.shareSettingModel().projectLanguagePath {
+            self.localizeStringTextFiled.stringValue = projectLanguagePath;
+        }
+        if let csvPath = SettingModel.shareSettingModel().csvPath {
+            self.csvTextFiled.stringValue = csvPath;
+        }
+        reloadUI()
     }
     
-    @IBAction func readCSVFile(_ sender: NSButton) {
-        guard CheckConfigManager.checkConfigReadySuccess() else {
+    func reloadUI() -> Void {
+        guard let csvPath = SettingModel.shareSettingModel().csvPath else {
             return
         }
-        /* 读取 CSV 文件并赋值到文本框里面 */
-        self.csvTextFiled.stringValue = FileKit.getFile(fileType: "csv")
+        guard csvPath.count>0 else {
+            return
+        }
+        guard let projectLanguagePath = SettingModel.shareSettingModel().projectLanguagePath else {
+            return
+        }
+        guard projectLanguagePath.count>0 else {
+            return
+        }
+        guard let projectRootPath = SettingModel.shareSettingModel().projectRootPath else {
+            return
+        }
+        guard projectRootPath.count>0 else {
+            return
+        }
+        
+        try? LocalizeStringKit.shareManager().parse(filePath: SettingModel.shareSettingModel().languagePath(code: "en"))
+        
         /* 执行异步解析 */
-        parse(parse: { 
+        parse(parse: {
             do {
                 /* 尝试解析读取到的 CSV 文件 */
-                try self.csvParse.parse(file: self.csvTextFiled.stringValue)
+                try self.csvParse.parse(file: csvPath)
                 /* 如果不报异常 则代表可以刷新表格 */
                 self.canReadloadData = true
             } catch {
@@ -60,6 +89,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                 self.tableView.reloadData()
             }
         }
+        
     }
     
     func parse(parse:@escaping (() -> Void), completion:@escaping (() -> Void)) {
@@ -71,26 +101,49 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         }
     }
     
-    @IBAction func readLocalizeStringFile(_ sender: NSButton) {
-        guard CheckConfigManager.checkConfigReadySuccess() else {
-            return
-        }
-        self.localizeStringTextFiled.stringValue = FileKit.getFile(fileType: "strings")
-        try? LocalizeStringKit.shareManager().parse(filePath: self.localizeStringTextFiled.stringValue)
-        var stringList = self.localizeStringTextFiled.stringValue.components(separatedBy: "/")
-        stringList.removeLast()
-        stringList.removeLast()
-        SettingModel.shareSettingModel().projectRootPath = stringList.joined(separator: "/")
+    @IBAction func readCSVFile(_ sender: NSButton) {
+        /* 读取 CSV 文件并赋值到文本框里面 */
+        self.csvTextFiled.stringValue = FileKit.getFile(fileType: "csv")
+        SettingModel.shareSettingModel().csvPath = self.csvTextFiled.stringValue
+        reloadUI()
+    }
+    
+    @IBAction func readEngineeringPath(_ sender: Any) {
+        self.projectRootPathTextFidld.stringValue = FileKit.getDirectory()!
+        SettingModel.shareSettingModel().projectRootPath = self.projectRootPathTextFidld.stringValue;
         print(SettingModel.shareSettingModel().projectRootPath!)
+        reloadUI()
+    }
+    
+    @IBAction func readLocalizeStringFile(_ sender: NSButton) {
+        self.localizeStringTextFiled.stringValue = FileKit.getDirectory()!
+        SettingModel.shareSettingModel().projectLanguagePath = self.localizeStringTextFiled.stringValue;
+        print(SettingModel.shareSettingModel().projectLanguagePath!)
+        reloadUI()
+        
+//        try? LocalizeStringKit.shareManager().parse(filePath: self.localizeStringTextFiled.stringValue)
+//        var stringList = self.localizeStringTextFiled.stringValue.components(separatedBy: "/")
+//        stringList.removeLast()
+//        stringList.removeLast()
+//        SettingModel.shareSettingModel().projectRootPath = stringList.joined(separator: "/")
+//        print(SettingModel.shareSettingModel().projectRootPath!)
     }
     
     
+    @IBAction func findProjLocalizeString(_ sender: NSButton) {
+        if let appDelegate = NSApp.delegate as? AppDelegate {
+            appDelegate.findProjLocalizeString()
+        }
+    }
     
     public func numberOfRows(in tableView: NSTableView) -> Int {
         return csvParse.items.count
     }
     
     public func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        guard csvParse.items.count>row else {
+            return ""
+        }
         let item  = csvParse.items[row]
         if let column = tableColumn, let cell = column.dataCell as? NSTextFieldCell {
             let color = NSColor.lightGray
@@ -100,8 +153,9 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         return item.name
     }
     
+    
     /// 跳转到语言详情
-    func pushDetail() {
+    @objc func pushDetail() {
         guard self.localizeStringTextFiled.stringValue.count > 0 else {
             let alert = NSAlert()
             alert.messageText = "必须选择Strings文件"
@@ -116,7 +170,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             return
         }
         controller.item = csvParse.items[tableView.selectedRow]
-        self.presentViewControllerAsModalWindow(controller)
+        self.presentAsModalWindow(controller)
     }
     
     /* 导出未添加的 Key
@@ -230,9 +284,9 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             return
         }
         var errorMessage = ""
-        guard let rootPath = SettingModel.shareSettingModel().projectRootPath else {
+        guard (SettingModel.shareSettingModel().projectLanguagePath != nil) else {
             let alert = NSAlert()
-            alert.messageText = "找不到工程路径，一键保存错误!"
+            alert.messageText = "找不到语言路径，一键保存错误!"
             alert.runModal()
             return
         }
@@ -243,7 +297,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                 }
                 return
             }
-            let savePath = "\(rootPath)/\(enCode).lproj"
+            let savePath = SettingModel.shareSettingModel().languagePath(code: enCode)
             saveInPath(path: savePath, item: item, errorMessage: &errorMessage)
         }
         if errorMessage.count > 0 {
@@ -255,23 +309,34 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     
     func saveInPath(path:String, item:CSVItem, errorMessage:inout String) {
+        let localize = LocalizeStringKit();
+        try? localize.parse(filePath: path)
+        let localizeMap = localize.localizeDictionary
+        
         var content = ""
-        let keys = FindLocalizeStringKit.shareManager().list.keys
+        let keys = FindLocalizeStringKit.shareManager().list.keys.sorted(by: { (name1, name2) -> Bool in
+            return name1.localizedStandardCompare(name2) == ComparisonResult.orderedAscending
+        })
         for c in keys.enumerated() {
             let key = c.element
-//            if key == "Deposit_Expansion_Rule" {
-//                print(key)
-//            }
-            guard let value = item.list[key] else {
+            var value = item.list[key]
+            if (value == nil || value?.count == 0) {
+                value = localizeMap[key]
+            }
+            
+            guard value != nil else {
                 continue
             }
-            guard value.count > 0 else {
+            guard value!.count > 0 else {
+                continue
+            }
+            
+            guard var fixSource = value else {
                 continue
             }
             guard let enValue = FindLocalizeStringKit.shareManager().list[key] else {
                 return
             }
-            var fixSource = value
             SettingModel.shareSettingModel().fixValues.forEach { (key,value) in
                 fixSource = fixSource.replacingOccurrences(of: key, with: value)
             }
@@ -280,10 +345,18 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                 errorMessage += "[\(fixSource)]占位符和[\(enValue)]占位符个数不一样\n\n"
                 continue
             }
-            guard !value.containChineseChar() else {
-                errorMessage += "[\(fixSource)]不能包含中文\n\n"
-                continue
+//            guard !value!.containChineseChar() else {
+//                errorMessage += "[\(fixSource)]不能包含中文\n\n"
+//                continue
+//            }
+            
+//            fixSource = fixSource.trimmingCharacters(in: CharacterSet.whitespaces)
+            if key == "verify_original_password" {
+                print(fixSource)
             }
+            fixSource = fixSource.trimmingCharacters(in: CharacterSet.newlines)
+            
+            fixSource = fixSource.replacingOccurrences(of: "\n", with: "\\n")
             /* 将\" 临时替换为 {T} */
             fixSource = fixSource.replacingOccurrences(of: "\\\"", with: "{T}")
             /* 修复其他" */
@@ -295,7 +368,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         }
 //        content = content.replacingOccurrences(of: "\\", with: "\\\\")
         do {
-            try content.write(toFile: "\(path)/Localizable.strings", atomically: true, encoding: String.Encoding.utf8)
+            try content.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
         } catch let error {
             let alert = NSAlert()
             alert.messageText = "找不到\(error.localizedDescription)，一键保存错误!"

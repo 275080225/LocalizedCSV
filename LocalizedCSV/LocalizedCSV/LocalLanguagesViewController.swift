@@ -10,8 +10,8 @@ import Cocoa
 
 /// 本地数据源列表
 class LocalLanguagesViewController: NSViewController, NSTableViewDataSource {
-    @IBOutlet weak var tableView:NSTableView!
-    @IBOutlet weak var textFiled:NSTextField!
+    @IBOutlet var tableView:NSTableView!
+    @IBOutlet var textFiled:NSTextField!
     var normalLanguage:String?
     var languages:[String] = []
     var didClickLanguageCompletionHandle:((_ language:String) -> Void)?
@@ -30,13 +30,13 @@ class LocalLanguagesViewController: NSViewController, NSTableViewDataSource {
         self.tableView.doubleAction = #selector(self.doubleClick)
     }
     
-    func doubleClick() {
+    @objc func doubleClick() {
         let index = self.tableView.selectedRow
         self.didClickLanguageCompletionHandle?(languages[index])
     }
     
     @IBAction func add(_ sender:Any?) {
-        guard self.textFiled.stringValue.characters.count > 0 && !languages.contains(self.textFiled.stringValue) else {
+        guard self.textFiled.stringValue.count > 0 && !languages.contains(self.textFiled.stringValue) else {
             return
         }
         languages.append(self.textFiled.stringValue)
