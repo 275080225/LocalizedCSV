@@ -201,7 +201,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             /* 去掉 Key 自动生成的字符 */
             let formatterKey = LCFormatterKey(key: key)
             /* 查找母文本的语言数据对象 */
-            guard let item = self.csvParse.getLanguageItem(name: "母文本English") else {
+            guard let item = self.csvParse.getLanguageItem(name: "value值(英文)") else {
                 return
             }
             /* 如果当前的 Key 不在多语言表格的 Key 列表里面 */
