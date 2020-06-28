@@ -1,3 +1,27 @@
-PODFILE CHECKSUM: 8b5e72ab3e9f2942c3cad801909e71df4d081d6d
+PODS:
+  - SSZipArchive (1.8.1)
+  - XlsxReaderWriter (2.3.2):
+    - SSZipArchive (~> 1.1)
+    - XMLDictionary (~> 1.4)
+  - XMLDictionary (1.4.1)
 
-COCOAPODS: 1.2.0
+DEPENDENCIES:
+  - XlsxReaderWriter (from `./Pods/Local Podspecs/XlsxReaderWriter`)
+
+SPEC REPOS:
+  https://cdn.cocoapods.org/:
+    - SSZipArchive
+    - XMLDictionary
+
+EXTERNAL SOURCES:
+  XlsxReaderWriter:
+    :path: "./Pods/Local Podspecs/XlsxReaderWriter"
+
+SPEC CHECKSUMS:
+  SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  XlsxReaderWriter: edeb00fda38d81cf91fa2939e3aa328710bb8bb6
+  XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
+
+PODFILE CHECKSUM: 6191744a1df95ea37261d66e679adc294a7213c8
+
+COCOAPODS: 1.9.0

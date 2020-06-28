@@ -54,6 +54,7 @@
 		5DE617E41FA1CA85000A6370 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		78AB411939E0316119BB7FDD /* Pods-LocalizedCSV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizedCSV.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV.release.xcconfig"; sourceTree = "<group>"; };
 		9CA2E9213676361ECC6388E9 /* Pods-LocalizedCSV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizedCSV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV.debug.xcconfig"; sourceTree = "<group>"; };
+		BF52C90F24A33F66009FD7DE /* LocalizedCSV-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalizedCSV-Bridging-header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,7 @@
 				5D005DF01FA2D9650085E94C /* TranslateStringViewController.swift */,
 				5DA04CF321096C0B00770A2B /* LanguageFunction.swift */,
 				5DA04CF5210AAE2C00770A2B /* CheckConfigManager.swift */,
+				BF52C90F24A33F66009FD7DE /* LocalizedCSV-Bridging-header.h */,
 			);
 			path = LocalizedCSV;
 			sourceTree = "<group>";
@@ -142,7 +144,6 @@
 				5D499EDA1F459ACA000F24B1 /* Frameworks */,
 				5D499EDB1F459ACA000F24B1 /* Resources */,
 				96C636FA0C04BD14D165FE22 /* [CP] Embed Pods Frameworks */,
-				C132AD65F81665BC1D6DC4F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,13 +209,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/XMLDictionary/XMLDictionary.framework",
+				"${BUILT_PRODUCTS_DIR}/XlsxReaderWriter/XlsxReaderWriter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMLDictionary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XlsxReaderWriter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A44A13C1D248F163CF5C3806 /* [CP] Check Pods Manifest.lock */ = {
@@ -223,28 +231,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocalizedCSV-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C132AD65F81665BC1D6DC4F8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -392,6 +388,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghang.LocalizedCSV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/LocalizedCSV/LocalizedCSV-Bridging-header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -408,6 +405,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghang.LocalizedCSV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/LocalizedCSV/LocalizedCSV-Bridging-header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

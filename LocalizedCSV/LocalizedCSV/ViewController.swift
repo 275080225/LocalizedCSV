@@ -103,7 +103,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     
     @IBAction func readCSVFile(_ sender: NSButton) {
         /* 读取 CSV 文件并赋值到文本框里面 */
-        self.csvTextFiled.stringValue = FileKit.getFile(fileType: "csv")
+        self.csvTextFiled.stringValue = FileKit.getFile(fileTypes: ["csv","xlsx"])
         SettingModel.shareSettingModel().csvPath = self.csvTextFiled.stringValue
         reloadUI()
     }
@@ -351,9 +351,6 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
 //            }
             
 //            fixSource = fixSource.trimmingCharacters(in: CharacterSet.whitespaces)
-            if key == "verify_original_password" {
-                print(fixSource)
-            }
             fixSource = fixSource.trimmingCharacters(in: CharacterSet.newlines)
             
             fixSource = fixSource.replacingOccurrences(of: "\n", with: "\\n")

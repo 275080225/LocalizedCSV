@@ -9,5 +9,5 @@ target 'LocalizedCSV' do
 
   # Pods for LocalizedCSV
 #   pod "SwiftCSV"
-
+    pod 'XlsxReaderWriter', :path => './Pods/Local Podspecs/XlsxReaderWriter'
 end

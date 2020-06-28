@@ -1235,7 +1235,7 @@
                                 <rect key="frame" x="195" y="3" width="133" height="32"/>
                                 <buttonCell key="cell" type="push" title="读取工程多语言" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uNi-aZ-Bbi">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="findProjLocalizeString:" target="XfG-lQ-9wD" id="6bd-1c-OXV"/>
@@ -1617,7 +1617,7 @@
                                 <rect key="frame" x="516" y="2" width="67" height="32"/>
                                 <buttonCell key="cell" type="push" title="取消" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="85L-YU-V6X">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="cancel:" target="t73-Xz-6xN" id="KnT-iR-UYt"/>

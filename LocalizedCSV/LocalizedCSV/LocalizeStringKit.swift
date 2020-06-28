@@ -43,12 +43,37 @@ class LocalizeStringKit {
         }
         /* 获取文件的内容 */
         let contentString = try String(contentsOfFile: filePath)
-        /* 根据换行切割文本为字符串数组 */
-        let contentList = contentString.components(separatedBy: "\n")
-        /* 遍历文件里面的每行字符串 */
-        for content in  contentList {
-            findKeyValue(content: content)
+        
+        let regularExpression = try? NSRegularExpression.init(pattern: "^(\"([^/]\\S+.*)\"|([^/]\\S+.*\\S+))\\s*=\\s*\"(.*)\";$", options: NSRegularExpression.Options.caseInsensitive)
+        contentString.enumerateLines { (line, stop) in
+            let result = regularExpression?.firstMatch(in: line, options: NSRegularExpression.MatchingOptions.reportProgress, range: NSMakeRange(0, line.count))
+            
+            if result?.range.location != NSNotFound, result?.numberOfRanges == 5 {
+                var keyRange = result?.range(at: 2)
+                if (keyRange?.location == NSNotFound) {
+                    keyRange = result?.range(at: 3)
+                    if (keyRange?.location != NSNotFound) {
+                        keyRange = NSMakeRange(keyRange!.location+1, keyRange!.length-2)
+                    }
+                }
+                let valueRange = result?.range(at: 4)
+                
+                let lineString = line as NSString
+                let key = lineString.substring(with: keyRange!)
+                let value = lineString.substring(with: valueRange!)
+//                key = key.trimmingCharacters(in: CharacterSet.newlines)
+//                value = value.replacingOccurrences(of: "%@", with: "%s")
+//                value = value.replacingOccurrences(of: "%%", with: "%")
+                self.localizeDictionary[key] = value
+            }
         }
+        
+//        /* 根据换行切割文本为字符串数组 */
+//        let contentList = contentString.components(separatedBy: "\n")
+//        /* 遍历文件里面的每行字符串 */
+//        for content in  contentList {
+//            findKeyValue(content: content)
+//        }
     }
     
     /// 查找每行里面的 Key 和值

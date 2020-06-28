@@ -41,11 +41,97 @@ class CSVParseKit {
     /* 存在解析出来的临时数据 */
     private var _tempItems:[CSVItem] = []
     
+    func parse(file:String) throws -> Void {
+        if FileKit.isSuffixType(typeName: "csv", filePath: file) {
+            try parseCSV(file: file)
+        } else if FileKit.isSuffixType(typeName: "xlsx", filePath: file) {
+            try parseXlsx(file: file)
+        }else{
+            throw CSVParseKitError.fileError
+        }
+    }
+    
+    
+    func parseXlsx(file:String) throws -> Void {
+        /* 移除之前的临时旧数据 */
+        _tempItems.removeAll()
+        /* 指定的文件后缀是否是 csv 如果不是抛出异常 */
+        guard FileKit.isSuffixType(typeName: "xlsx", filePath: file) else {
+            throw CSVParseKitError.fileError
+        }
+        
+        let spreadsheet: BRAOfficeDocumentPackage = BRAOfficeDocumentPackage.open(file)
+        guard spreadsheet.workbook != nil, spreadsheet.workbook.sheets.count>0 else {
+            return
+        }
+        let sheet: BRASheet = spreadsheet.workbook.sheets[0] as! BRASheet
+        let worksheet: BRAWorksheet = spreadsheet.workbook.worksheets[0] as! BRAWorksheet
+        let cell: BRACell = worksheet.cell(forCellReference: "A1")
+        
+        // Print some info to show the code works.
+        print(sheet.name) // print "Sheet1"
+        print(cell.stringValue()) // print "Alpha"
+        
+        guard worksheet.rows.count > 1 else {
+            throw CSVParseKitError.fileError
+        }
+        /* 翻译的多语言的名称列表 */
+        let supportlanguagesRow = worksheet.rows[0] as! BRARow
+        
+        /* 遍历所有的多语言名称 */
+        for l in supportlanguagesRow.cells.enumerated() {
+            let cell: BRACell = l.element as! BRACell
+            let cellReference = BRACell.cellReference(forColumnIndex: l.offset+1, andRowIndex: 1)
+            guard cellReference == cell.reference else {
+                throw CSVParseKitError.fileError
+            }
+            let l = cell.stringValue()
+            let item = CSVItem()
+            item.name = l!
+            _tempItems.append(item)
+        }
+        
+        /* 遍历全部的数据 */
+        for c in worksheet.rows.enumerated() {
+            /* 如果是第一行 跳过 */
+            guard c.offset > 0 else {
+                continue
+            }
+            let row: BRARow = c.element as! BRARow
+            /* 如果第一个值获取不到则继续 */
+            guard row.cells.count>0 else {
+                continue
+            }
+
+            let cell0Reference = BRACell.cellReference(forColumnIndex: 1, andRowIndex: row.rowIndex)
+            guard let cell0: BRACell = row.cells[0] as? BRACell else {
+                continue
+            }
+            guard cell0Reference == cell0.reference else {
+                continue
+            }
+            guard let value0 = cell0.stringValue() else {
+                continue
+            }
+            
+            for acell in row.cells {
+                guard let cell: BRACell = acell as? BRACell else {
+                    continue
+                }
+                guard cell.columnIndex() <= _tempItems.count else {
+                    continue
+                }
+                let itemC = _tempItems[cell.columnIndex()-1]
+                itemC.list[value0] = cell.stringValue()
+            }
+        }
+    }
+    
     /// 解析指定的 CSV 文件
     ///
     /// - Parameter file:  CSV 文件路径
     /// - Throws: 解析出错抛出的异常
-    func parse(file:String) throws -> Void {
+    func parseCSV(file:String) throws -> Void {
         /* 移除之前的临时旧数据 */
         _tempItems.removeAll()
         /* 指定的文件后缀是否是 csv 如果不是抛出异常 */

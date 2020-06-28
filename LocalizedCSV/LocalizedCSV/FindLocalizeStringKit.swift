@@ -42,7 +42,7 @@ class FindLocalizeStringKit {
         let files = FileKit.findAllFiles(path: path)
         /* 遍历所有的文件 */
         for file in files {
-            let isSourceFile = file.range(of: ".h") != nil || file.range(of: ".m") != nil || file.range(of: ".swift") != nil
+            let isSourceFile = file.hasSuffix(".h") || file.hasSuffix(".m") || file.hasSuffix(".mm") || file.hasSuffix(".swift")
             if !isSourceFile {
                 continue
             }

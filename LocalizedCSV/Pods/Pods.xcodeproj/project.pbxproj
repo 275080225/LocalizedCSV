@@ -7,198 +7,1204 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		067E4D124D63EDC565584E4366FFED8A /* Pods-LocalizedCSV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0C89424BDB973E89D3028674AC3C8 /* Pods-LocalizedCSV-dummy.m */; };
-		58DE4E8E26A5BD1330440139C20641E6 /* Pods-LocalizedCSV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E8B0D35E500DBABCD3C95FFC707704 /* Pods-LocalizedCSV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2B87C0581A5BEEA4751F19309A5492F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		02C841F7EF8746B3C85ADB48D5EF67B7 /* BRASheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E430FC344BEB9656ADED9BB66BEEEFC /* BRASheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05A01D55BC34C8BD4C060A64CE58ABD0 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 3189CD688825D24EEE6F21811B0585A4 /* hmac.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		067E134405870BDFDB75382CAD895454 /* aes_via_ace.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4339AE62006DC850F4ED93B469453B /* aes_via_ace.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0BE8F6479A65176CA0BFF0CD591D2245 /* XMLDictionary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E595C04E453661E4CB874A7F20228906 /* XMLDictionary-dummy.m */; };
+		0C8083E8012197E0D8CE30350B3F7349 /* SSZipArchive-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A392931CD2302025E479E9A586F52CE7 /* SSZipArchive-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D14DB2F7B302753962054DC485E6497 /* NSDictionary+OpenXmlString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C09A0F9A0FB421DC38B7C6D231B53C1 /* NSDictionary+OpenXmlString.m */; };
+		0D2B888704D40DD13229E736BB04AEA6 /* BRACellFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D1DAEA34A0C772D83979CA81DB8D0C /* BRACellFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1180F471B02D228F5D2EE2BBB54AF649 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 76218F2D0D109E3B0FDA26CE6F879AC7 /* aes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		12582C7C436C3AEF588D7EECB59886D9 /* BRAOfficeDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F236C05E347EAE3FD295CEB1D716B3 /* BRAOfficeDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		157F83DDA197192241063E49011ADB71 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 09FCA0CE27AE51ED4CC6755FE754D5B1 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		158258177BF51AFF492FBF59F207136A /* SSZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1295CD6624C9BB91182A6839852BA8A0 /* SSZipArchive.framework */; };
+		166ECBDC1F808AC6735BFC9809AA7DF8 /* aestab.h in Headers */ = {isa = PBXBuildFile; fileRef = E2440829922FD9010DECA1AD00C2D632 /* aestab.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		17726FF7B04418A8D2B7A6309E4220FD /* BRARelatedToColumnAndRowProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B3CDB699C4C1606C4BB20A4C84E43A89 /* BRARelatedToColumnAndRowProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17F739924F53D88214D6D6A784BC8A7A /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = 302B1E362463F082DBC01BFE0A6D460D /* prng.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		187FF3B50671231DCFF4B4B4D1DB60BD /* BRAElementWithRelationships.m in Sources */ = {isa = PBXBuildFile; fileRef = 9363D8C8C94AD943360CB7AEAC7C2B4C /* BRAElementWithRelationships.m */; };
+		1E0079DA8AA03117530745766A0BAA61 /* BRAContentTypesDefaultExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A98C19652F821F9615A5CF38448665FF /* BRAContentTypesDefaultExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FF21EB2B78264CC5BEAE4CB88A809C2 /* XlsxReaderWriter-swift-bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6FC6703750BCFEF6D2B8DBFBF1045B /* XlsxReaderWriter-swift-bridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23580C795A0EEFDC60EF7F1A7E6E0FAB /* BRAColumn.h in Headers */ = {isa = PBXBuildFile; fileRef = 390E043F905E3298C6D663DD339BFED7 /* BRAColumn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27ACD37E049C3FB3607A9A9C4BC5DD5C /* XMLDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = DF46506448D3E46C0591A9A281746C98 /* XMLDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3147501880198551AD822D1F898301FA /* BRAOpenXmlSubElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A5384E8100390AB7DF1072E6B05F9AF /* BRAOpenXmlSubElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3735AC183F439D566562C5E1C505FFDD /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = F20AFB345D884A494C8610DC5630A93E /* mztools.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		38F1E35A9B15B0909A079B3FD3E88DEA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5BACF159F1FC48C54A111A468F3787 /* Cocoa.framework */; };
+		3BEF04E442C7C59AAB47583398B7EBA0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5BACF159F1FC48C54A111A468F3787 /* Cocoa.framework */; };
+		3C93F0F8A3526C5D80BF49C52263ABF4 /* BRARelationships.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE373780BF818AD3B7E85B1A9A4D39B /* BRARelationships.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C9492052150E6A2E7C5C49AA8151717 /* BRAOpenXmlSubElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F26C7FAABECE46001C1BDDCF3EFC12 /* BRAOpenXmlSubElement.m */; };
+		3E4485784A15114AAD29211110D92D9B /* BRACellFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 897C28CED35D645087D00A8E0FADB568 /* BRACellFormat.m */; };
+		413653D62774A57B52E265D555263F7A /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD1952A6DD9E216054CD16C9765E1B5 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		418FE8039B6D9DFDE9E57157A8733D27 /* Pods-LocalizedCSV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 455F37E3B76AB098328BF881148BC0E0 /* Pods-LocalizedCSV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4229F7B53BA17DCD8F1C312527EB3AFD /* BRACalcChainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B5391B22D733F5D3EB3EFF49CA06B6 /* BRACalcChainCell.m */; };
+		42D584071FAB112B34687B6E447FA484 /* BRAWorksheetDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = A218435A6DC2E23727940F52037AF1E5 /* BRAWorksheetDrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		479764595245C32C80B5BE5FFB3E796F /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2A258B8A7C8A50E630972428179B3D /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49F8A17A460AC982DF530DB57DBD4C72 /* BRAImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 66EC6291D18A4758EA4E56A4F4617AF3 /* BRAImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CA976726C046AAEDEB4E201C6A2462D /* BRASharedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 600B8E681EA6BB59DD483215C9CB4E1C /* BRASharedStrings.m */; };
+		4D1194C92A1B77E887FD85E9DD1A2737 /* BRASharedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A01F92A009A1330B902B26EE703E55 /* BRASharedString.m */; };
+		4E4327D112EB531631539BEF6767175A /* XMLDictionary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8BAB7C62D7C7159B323E011D797C964 /* XMLDictionary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5103A2DAF4EA28F6ED91EEC41978A4CD /* NSDictionary+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AFE2CE257670E0AC5D9B9D874E2CF2 /* NSDictionary+DeepCopy.m */; };
+		5620976AF00D34CD8B340BDB6CD2FA72 /* XMLDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682421AD4D089C7A8FF3A5119DDAACFA /* XMLDictionary.framework */; };
+		5628690836B9B0BAE31CA9BC4ECDE9C5 /* BRAContentTypesOverride.h in Headers */ = {isa = PBXBuildFile; fileRef = B04D3D2841E09BE2FE0A2A07AB62650D /* BRAContentTypesOverride.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		583877D42378E890F962DEDC5D46A594 /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C42C91316A94DC1E0083555DA2FD30E /* sha1.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B309567B4453EB3FE909B44773BA13A /* BRASheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E0B8841C48BCA6F61612D6B5C10D35 /* BRASheet.m */; };
+		5E65CB2AC62FA7F0CD227DAADD4C63C2 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CABAA64660EFD8FF1949DB5088238BE /* mztools.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5FC5AFEE422D49C009B47DEF3CE186E9 /* NativeColor+OpenXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB15A1F123056A4DD6DFDAD9EBBDD3F /* NativeColor+OpenXML.m */; };
+		611F81EE81475D880A7B37D9E974461E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5BACF159F1FC48C54A111A468F3787 /* Cocoa.framework */; };
+		667AA0A385D5F8190E51D392DCBE7E81 /* BRADrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6BE22D31DBEE56605460037245E30 /* BRADrawing.m */; };
+		677A8624188D135BE64AA46583386861 /* NativeColor+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 65966872615E32748808C693F87980BF /* NativeColor+HTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D2F9DBC6F09305596276718D377BBE1 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3235BF72033172FB0DF688916A54C062 /* SSZipArchive-dummy.m */; };
+		71E7C2FCDCFD5714735D7A47E6C03B1E /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = E281C3E30E7AB25F0AF8CF8863BFF105 /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		71F3BEC12D18344A825AA3A3A4D3D425 /* NSDictionary+DeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C59009016FDC2FCF278DE21A8B9ACDB /* NSDictionary+DeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71F8D16A67F51ECC2FBE7D51259BDAF1 /* BRACell.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6E65DF90DA3300FB8847A91313AA76 /* BRACell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7235CBFD3BED622C47D8888DFD126525 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4FF04636AD5BA9E092CFC479BD8F85 /* ZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72F5E1DD4A6D9F691FD335307D107946 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = ADB1E4CCC6A68B3C0AD3AA671C47979E /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		79312B14BD183F49C3C31FEF6A778662 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 71C6864183CE7070BC86DBA2B279462B /* fileenc.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7B22B77A169F6AE9D1A2379BDF6870F2 /* BRACalcChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 453BF50021A109AFE0C948DAB8AB284A /* BRACalcChain.m */; };
+		7E9609401076B71119CCC611945D79BE /* pwd2key.h in Headers */ = {isa = PBXBuildFile; fileRef = C35379F34FFF8D36B26F05D867734714 /* pwd2key.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7EFACA2A6FB0F07CA326755440D1A1B8 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AAC5601908F11E1F222EB22F93D988 /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7FD33B8697E5165DE336A4A5D1E81DA2 /* BRAWorksheetDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6954E3058DEC1729DD629FD7AFFFD1A1 /* BRAWorksheetDrawing.m */; };
+		80CE2E87A22C1C6584BBE033CC04D2B5 /* brg_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 40003C102CC4EE17D50F9B81DEB839DC /* brg_endian.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		811FEAEC841E6A07CE5F3420C0CF8B42 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 217CD36CD7C0B22F3EC59AF0043A7E38 /* XMLDictionary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		81E49EA8848AE1141E120036E149CFE3 /* BRASharedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 907533CB5C15F8BA5B5E0181097D7BB5 /* BRASharedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		846E81E27ED372CDE0388DB7A7B32393 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F0AEC5274D5991604C8A765D9705145 /* aestab.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		849B7E09DAE5224A85966A9DCDBFF085 /* BRATheme.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E91C64E7CE089F5AC3615042BA1A33 /* BRATheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85E78858C46DFCD833B85B542984F3E8 /* BRAWorksheet.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7DA0DFA4E1954BD98FC3D550836B1B /* BRAWorksheet.m */; };
+		899A311E2009B99DB19A9F27A0C3BDA8 /* BRADrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA000D8C36BBE243DC3D3C7B8BF8C73 /* BRADrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D2B42B508CB15669A27B146827B5838 /* Pods-LocalizedCSV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3286621937C3FA1599FA8090F587F383 /* Pods-LocalizedCSV-dummy.m */; };
+		8D5B7E38D494DFA3FCFF31C3702D8F66 /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2E93C8BCCEA471B15313DA7ED8467B /* fileenc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8D87F44D65684893E0D02E14FCFF69D6 /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = D249F7B53A381096EE74C1E8CFFEDDAC /* brg_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8F38877378972CED83E3874F35F243E5 /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = B37E138045CD83A6E1F669AA82E9D1E9 /* hmac.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9081269172D6CA1CAAFF37327B7321D7 /* BRAContentTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C2822E86F00B0448326EDE6F57E5B /* BRAContentTypes.m */; };
+		93172D78A4EEF93F18B7514FB1536ABC /* NSDictionary+OpenXMLDictionaryParser.h in Headers */ = {isa = PBXBuildFile; fileRef = D2369CF8431800DD94EB08F8BD71C448 /* NSDictionary+OpenXMLDictionaryParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		939E077FF3801E6E3E7FEA0447DFF8A7 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = A598A248F9F16E7D149A17021379FEEE /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		93AB0C110FC9259AC8D1FD43F87236F0 /* NativeFont+BoldItalic.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA962F9DD3A67104D192FA1B0A83338 /* NativeFont+BoldItalic.m */; };
+		9426974F8B768D6F5FCEC1DA5CE7463C /* BRAPlatformSpecificDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FEBB0A061CD603E5D556BFF2EF506F6 /* BRAPlatformSpecificDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98113D0A3F427FFE962BE2D45C985C30 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 006FF0A1B40CA93C061016B9E38C2F35 /* sha1.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		99BC8E9E1A71E62CA0FCE787187218D8 /* BRACellFill.h in Headers */ = {isa = PBXBuildFile; fileRef = 363391A729B18774AEA68DBEDDA6A315 /* BRACellFill.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BF77D60A08573F436AA06C0E8BC519F /* BRAImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F25E06A5E220E662B27470FFAAC586C /* BRAImage.m */; };
+		9CA96F380AFDABBB23FD9837E2CF6A4A /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 75E132A34DD744DA93955F49E88473E1 /* pwd2key.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9CD8623CAB935D933FB14BCC50057D1D /* BRAVmlDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8945C8CF10E3D813C748B3BDF3760924 /* BRAVmlDrawing.m */; };
+		9D5B98677943CBFA29CB60222218198A /* BRAComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 014846B06FF978747213D8E6EC67FEB8 /* BRAComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D6526C697ECF24D57A199CDE6CCA0A8 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF403BBB2258BC6FF917077D538A963 /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A10500761FE8174C32BC94BBC4D8E117 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FFEF86938C01E0156D4883D5E6D47E0 /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A23D16E8071678055D9334EDC44591CB /* BRAComments.h in Headers */ = {isa = PBXBuildFile; fileRef = 44E67CE393C3467D58FD7B2D0EB86E68 /* BRAComments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A82F9E388A02D516116640FC76C57241 /* NativeColor+OpenXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 1510C4D95C01C474685E3D165B84317C /* NativeColor+OpenXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8CAA21E66C48DD9C56119D21C835CC3 /* NativeColor+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = CB900CDBFBCA0A713DB12BB0FC1A4D1C /* NativeColor+HTML.m */; };
+		A924F2DE32FC4017AB30E179BC230A49 /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 39ABCAD27BC56B10FCC9347FF601619B /* entropy.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A9EAEC19260EB4FB2BC7AF486ABDC3DD /* aesopt.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E71AB7BF97736C5D4AD707F9ACE676 /* aesopt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AB083B390993096ECCD970E4D245FAA7 /* BRAStyles.h in Headers */ = {isa = PBXBuildFile; fileRef = 11A833B1030AD9709207013A94FDCA97 /* BRAStyles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC21816B8F0805CF8D0A1B26F7040CEF /* BRAOfficeDocumentPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCD71F6B860D04EEE2D18AE3A6B14A3 /* BRAOfficeDocumentPackage.m */; };
+		ADD2CDF63158D0EB91F3DE6CAB0AB01D /* XlsxReaderWriter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E363F569C7ABC98ABFE0D8C1696DE7 /* XlsxReaderWriter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE26BBC9062678B9146DF151610EBD1F /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 62904AF6F2C0A01E90181C3D818BD9E3 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B00B3D24948C535629E6A4DE30797068 /* BRAContentTypesOverride.m in Sources */ = {isa = PBXBuildFile; fileRef = 099148D21D0184F4AE30E17103DB9532 /* BRAContentTypesOverride.m */; };
+		B6DD30E92669536C35FC44C2A6B15196 /* BRACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C00E147CEF038FA5E3E79C5C150716 /* BRACell.m */; };
+		B7AC02F70A4C1B1E4BDA70E157640C13 /* BRAOfficeDocumentPackage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC7EBBC6DDA19A41AC2E7B63507B625 /* BRAOfficeDocumentPackage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD5E44CA549925B31DDB9FEEECCC77C8 /* BRAOfficeDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D067A92D7B8A054A0CF8C313AC778AC /* BRAOfficeDocument.m */; };
+		BE5D35D5D8C7DB5EFEA8E386482179BB /* BRAMergeCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8015298DA69975E9C8B82EA5DA5BBFCC /* BRAMergeCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF9DD08C427ACF958310E050B7163EFB /* BRAWorksheet.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E90AF5C7E6A4CF6116BD6DFCD2D767 /* BRAWorksheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0741D7CA25E5F4EC6CF58783E574A9F /* BRACellFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FE47B239C0AB590A55C5774E57E264 /* BRACellFill.m */; };
+		C46504AE4A5C8AFEF536EB59794B4E92 /* entropy.h in Headers */ = {isa = PBXBuildFile; fileRef = E9A14217DD31F80B91E406EDD09AF491 /* entropy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C4C7D90DC5B07FE333E0B2A2D821D7A8 /* NSDictionary+OpenXMLDictionaryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F6A89FEEA178817E10D16ADD9ECB87 /* NSDictionary+OpenXMLDictionaryParser.m */; };
+		C52ECCED5B49B763DB28C87B61F2DA76 /* BRAOpenXmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B49D721436C151DB0C093BEB47A110 /* BRAOpenXmlElement.m */; };
+		C8C00EA4E92F730BE6290783A73F033D /* BRANumberFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = DFF3819FBA34ABC7602A587C5D323D12 /* BRANumberFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAB43BAB68DCBBA9D37F15BD58B7B829 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = CB29D8A7B37C148C27F5637C1EF1D90D /* aescrypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CAE095BE779A5F9D9483A739920832E2 /* BRAOpenXmlElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 36EB4FD88DA2CEB7714756AB9DAFE956 /* BRAOpenXmlElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC7E9C1BBFC54A8E6DF09E77906E5695 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B336FC1251BBAE75854DCAF9D646F /* prng.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CE4FFF617A8481CEB4088798C1111FEC /* BRACalcChainCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 434ABAFCC800DADA4E2AF85F4F7B3545 /* BRACalcChainCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE9CC772A4EA0095B80371135B129099 /* BRANumberFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF9B5CBB2915D2380583992F5AD4D9 /* BRANumberFormat.m */; };
+		D0E1DFC025D316D72362849984E88320 /* BRAStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB33A3FD3A98641C3D172A5BB169FC /* BRAStyles.m */; };
+		D41D494C607AC901FA86378F90D87A33 /* BRAColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF588F6FF1CB6F9E321E2167F47A11D /* BRAColumn.m */; };
+		D4DB5A8AF14A01D8900331DE49CE7643 /* BRARow.m in Sources */ = {isa = PBXBuildFile; fileRef = E23FADF8C9C064B68853439E54596E1E /* BRARow.m */; };
+		D75CCEC9B6B5B17355EF4F2C217A35DD /* BRAMergeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCB0669A0A7F7A3C8D727E0C4E0E55D /* BRAMergeCell.m */; };
+		D79968559A11ADE5E40D1E647CCFDB6F /* BRAContentTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F68A8B00D76314DB525E867159CBF39 /* BRAContentTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D947BFA676C21097443CE1ABB06B5E2E /* BRARelationship.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3E43DFB0A17792B6742B1AF504D106 /* BRARelationship.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF706D47800F2F5C76922076DE164361 /* XlsxReaderWriter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C69BF48E3BFE86D332A309479999B0 /* XlsxReaderWriter-dummy.m */; };
+		E0B5DF597DF19E7CB50B770AC8F151B7 /* BRACellRange.h in Headers */ = {isa = PBXBuildFile; fileRef = CAC9A7B79412041756948ED9F5DF3715 /* BRACellRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E15273F41CCAD467621B03493A2183E9 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = BF3B69D44DBFE6780C80B508E8B2E88C /* aeskey.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E4C5D169EB585D1457EADE24398A510E /* BRARow.h in Headers */ = {isa = PBXBuildFile; fileRef = B62DA3D999D9E445FC082CD9ED6E6DB1 /* BRARow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6D5F116CEF868D9DC062DA98E721933 /* BRARelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C1BBA59A87D35F966BA30C0ABA3044 /* BRARelationship.m */; };
+		E721FB72F42B8DA2EA6905D696A6B528 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5BACF159F1FC48C54A111A468F3787 /* Cocoa.framework */; };
+		E81F9979A8AFF7BB0668D9CB6A5EE77B /* BRAContentTypesDefaultExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C06F7F3E50512E166B3FCAB0050E3 /* BRAContentTypesDefaultExtension.m */; };
+		E8B0B66568521028EBEE4BD249224EC6 /* BRAComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B7F73F95F70D2750A46A5DCA2E560 /* BRAComments.m */; };
+		E97DB1A92939B293CE8AF47A93B85617 /* BRAElementWithRelationships.h in Headers */ = {isa = PBXBuildFile; fileRef = 75323121335E72CFD8786F963A4BDE2E /* BRAElementWithRelationships.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F12D1DFA16E6D553A1C2033C11F1287B /* BRARelationships.m in Sources */ = {isa = PBXBuildFile; fileRef = 07496741B8EAFD282064A340BDDBAE0A /* BRARelationships.m */; };
+		F2450D16309A824BF53C74EAC5D9D719 /* BRAComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 683159C68C577D7920184E09B37C2ADE /* BRAComment.m */; };
+		F391710D5B038A6EC5BC792266726206 /* BRAVmlDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 08A67C778EB8FF67F3FA6910C8A29E47 /* BRAVmlDrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F408605EF2D7726E1852D0B87E10D7E3 /* BRATheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AA53E2FFB03BF8A4C1EF84974E52B /* BRATheme.m */; };
+		F4A0C36C962DDD848418896F5DA06812 /* NativeFont+BoldItalic.h in Headers */ = {isa = PBXBuildFile; fileRef = 1074DA4A104830C51F2FACDF947DA048 /* NativeFont+BoldItalic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F55D325E2F628CC6731875881EBEC4E0 /* NSDictionary+OpenXmlString.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE774FC90BC852BE3BA51ADD3BD602F /* NSDictionary+OpenXmlString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F64085555F52285CFDB7BA26BF78292E /* BRACellRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 5273538CC7F5D0A01CF4770EDD079674 /* BRACellRange.m */; };
+		F713B7BB124C30333D7278F4AA1FDF67 /* BRASharedStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C15F56F4CBF31EC14EA24501E9E7575 /* BRASharedStrings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB4BE358A1E31F484607EB792F403B25 /* BRACalcChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 8923D61B1ABE13BC6DBB8367360D167A /* BRACalcChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1D7724C7DE96F51E6559DB137AE2809D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
+			remoteInfo = SSZipArchive;
+		};
+		3F8E1B9B07DD3A9BBB8F9083F6388B17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9137C1635807AFB96F5BB125784CCF06;
+			remoteInfo = XMLDictionary;
+		};
+		43E6A7F02F399F204208DF9AE8310DBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
+			remoteInfo = SSZipArchive;
+		};
+		9148801315A114AC485CA4708B87C132 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF717B65664D59F1F03B1F2B6929C233;
+			remoteInfo = XlsxReaderWriter;
+		};
+		9F587FDC06DDF13188E882E0104E0B7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9137C1635807AFB96F5BB125784CCF06;
+			remoteInfo = XMLDictionary;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0FD0C89424BDB973E89D3028674AC3C8 /* Pods-LocalizedCSV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocalizedCSV-dummy.m"; sourceTree = "<group>"; };
-		20AFC85777A01C1DD2366C8E43550602 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		31DD98565764B7E232F865B0B730FBE7 /* Pods-LocalizedCSV-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalizedCSV-acknowledgements.markdown"; sourceTree = "<group>"; };
-		34E8B0D35E500DBABCD3C95FFC707704 /* Pods-LocalizedCSV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocalizedCSV-umbrella.h"; sourceTree = "<group>"; };
-		5C301235D1963EA686FDE8F1C028BDB9 /* Pods-LocalizedCSV-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalizedCSV-acknowledgements.plist"; sourceTree = "<group>"; };
-		8AB73453CB8AD114E28CA343ABEAE218 /* Pods-LocalizedCSV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalizedCSV.debug.xcconfig"; sourceTree = "<group>"; };
-		8D68F9907F2B84662275DBF3ABCDAC1D /* Pods-LocalizedCSV-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LocalizedCSV-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B50C1287CEBA09620FFB6AA4B460EF6E /* Pods_LocalizedCSV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LocalizedCSV.framework; path = "Pods-LocalizedCSV.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8C5B376880F9AD7A82CA3239B530259 /* Pods-LocalizedCSV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalizedCSV.release.xcconfig"; sourceTree = "<group>"; };
-		D451ECB4E2DCFCBB1C6101E09E83458F /* Pods-LocalizedCSV-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LocalizedCSV-frameworks.sh"; sourceTree = "<group>"; };
-		F0DEA104E34C735A2C9CBC0585FD2455 /* Pods-LocalizedCSV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LocalizedCSV.modulemap"; sourceTree = "<group>"; };
+		006FF0A1B40CA93C061016B9E38C2F35 /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha1.c; path = SSZipArchive/aes/sha1.c; sourceTree = "<group>"; };
+		014846B06FF978747213D8E6EC67FEB8 /* BRAComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAComment.h; path = XlsxReaderWriter/BRAComment.h; sourceTree = "<group>"; };
+		07496741B8EAFD282064A340BDDBAE0A /* BRARelationships.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRARelationships.m; path = XlsxReaderWriter/BRARelationships.m; sourceTree = "<group>"; };
+		08A67C778EB8FF67F3FA6910C8A29E47 /* BRAVmlDrawing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAVmlDrawing.h; path = XlsxReaderWriter/BRAVmlDrawing.h; sourceTree = "<group>"; };
+		099148D21D0184F4AE30E17103DB9532 /* BRAContentTypesOverride.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAContentTypesOverride.m; path = XlsxReaderWriter/BRAContentTypesOverride.m; sourceTree = "<group>"; };
+		09FCA0CE27AE51ED4CC6755FE754D5B1 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZipArchive/minizip/zip.h; sourceTree = "<group>"; };
+		0A43575B86CD737349D744D67DC2D24C /* SSZipArchive-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSZipArchive-Info.plist"; sourceTree = "<group>"; };
+		0BCB33A3FD3A98641C3D172A5BB169FC /* BRAStyles.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAStyles.m; path = XlsxReaderWriter/BRAStyles.m; sourceTree = "<group>"; };
+		0C7B336FC1251BBAE75854DCAF9D646F /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; name = prng.c; path = SSZipArchive/aes/prng.c; sourceTree = "<group>"; };
+		0CB15A1F123056A4DD6DFDAD9EBBDD3F /* NativeColor+OpenXML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NativeColor+OpenXML.m"; path = "XlsxReaderWriter/NativeColor+OpenXML.m"; sourceTree = "<group>"; };
+		0CE69027544196C002EF489E7597E930 /* Pods-LocalizedCSV-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalizedCSV-acknowledgements.plist"; sourceTree = "<group>"; };
+		0D2C06F7F3E50512E166B3FCAB0050E3 /* BRAContentTypesDefaultExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAContentTypesDefaultExtension.m; path = XlsxReaderWriter/BRAContentTypesDefaultExtension.m; sourceTree = "<group>"; };
+		0E6B7F73F95F70D2750A46A5DCA2E560 /* BRAComments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAComments.m; path = XlsxReaderWriter/BRAComments.m; sourceTree = "<group>"; };
+		0F68A8B00D76314DB525E867159CBF39 /* BRAContentTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAContentTypes.h; path = XlsxReaderWriter/BRAContentTypes.h; sourceTree = "<group>"; };
+		1074DA4A104830C51F2FACDF947DA048 /* NativeFont+BoldItalic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NativeFont+BoldItalic.h"; path = "XlsxReaderWriter/NativeFont+BoldItalic.h"; sourceTree = "<group>"; };
+		11A833B1030AD9709207013A94FDCA97 /* BRAStyles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAStyles.h; path = XlsxReaderWriter/BRAStyles.h; sourceTree = "<group>"; };
+		1295CD6624C9BB91182A6839852BA8A0 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13AAC5601908F11E1F222EB22F93D988 /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
+		1510C4D95C01C474685E3D165B84317C /* NativeColor+OpenXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NativeColor+OpenXML.h"; path = "XlsxReaderWriter/NativeColor+OpenXML.h"; sourceTree = "<group>"; };
+		1947AD53AAE100EC19C66E45F2BDE446 /* XMLDictionary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMLDictionary-prefix.pch"; sourceTree = "<group>"; };
+		1A2E93C8BCCEA471B15313DA7ED8467B /* fileenc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileenc.h; path = SSZipArchive/aes/fileenc.h; sourceTree = "<group>"; };
+		1C42C91316A94DC1E0083555DA2FD30E /* sha1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = SSZipArchive/aes/sha1.h; sourceTree = "<group>"; };
+		1C59009016FDC2FCF278DE21A8B9ACDB /* NSDictionary+DeepCopy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+DeepCopy.h"; path = "XlsxReaderWriter/NSDictionary+DeepCopy.h"; sourceTree = "<group>"; };
+		1CBB04610015CB768EE75A3AFE7E46C2 /* XMLDictionary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XMLDictionary.modulemap; sourceTree = "<group>"; };
+		204B7777B79FA93A5E53BCFDF1B040EE /* XMLDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMLDictionary.release.xcconfig; sourceTree = "<group>"; };
+		217CD36CD7C0B22F3EC59AF0043A7E38 /* XMLDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XMLDictionary.m; path = XMLDictionary/XMLDictionary.m; sourceTree = "<group>"; };
+		2C09A0F9A0FB421DC38B7C6D231B53C1 /* NSDictionary+OpenXmlString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+OpenXmlString.m"; path = "XlsxReaderWriter/NSDictionary+OpenXmlString.m"; sourceTree = "<group>"; };
+		2D3E43DFB0A17792B6742B1AF504D106 /* BRARelationship.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRARelationship.h; path = XlsxReaderWriter/BRARelationship.h; sourceTree = "<group>"; };
+		2DCB0669A0A7F7A3C8D727E0C4E0E55D /* BRAMergeCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAMergeCell.m; path = XlsxReaderWriter/BRAMergeCell.m; sourceTree = "<group>"; };
+		2FC6373ED2EC007D479D449D79B7013F /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
+		2FCF9B5CBB2915D2380583992F5AD4D9 /* BRANumberFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRANumberFormat.m; path = XlsxReaderWriter/BRANumberFormat.m; sourceTree = "<group>"; };
+		2FE6BE22D31DBEE56605460037245E30 /* BRADrawing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRADrawing.m; path = XlsxReaderWriter/BRADrawing.m; sourceTree = "<group>"; };
+		302B1E362463F082DBC01BFE0A6D460D /* prng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = prng.h; path = SSZipArchive/aes/prng.h; sourceTree = "<group>"; };
+		3189CD688825D24EEE6F21811B0585A4 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; name = hmac.c; path = SSZipArchive/aes/hmac.c; sourceTree = "<group>"; };
+		31C00E147CEF038FA5E3E79C5C150716 /* BRACell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACell.m; path = XlsxReaderWriter/BRACell.m; sourceTree = "<group>"; };
+		3235BF72033172FB0DF688916A54C062 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
+		3286621937C3FA1599FA8090F587F383 /* Pods-LocalizedCSV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocalizedCSV-dummy.m"; sourceTree = "<group>"; };
+		33F26C7FAABECE46001C1BDDCF3EFC12 /* BRAOpenXmlSubElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAOpenXmlSubElement.m; path = XlsxReaderWriter/BRAOpenXmlSubElement.m; sourceTree = "<group>"; };
+		363391A729B18774AEA68DBEDDA6A315 /* BRACellFill.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACellFill.h; path = XlsxReaderWriter/BRACellFill.h; sourceTree = "<group>"; };
+		36EB4FD88DA2CEB7714756AB9DAFE956 /* BRAOpenXmlElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAOpenXmlElement.h; path = XlsxReaderWriter/BRAOpenXmlElement.h; sourceTree = "<group>"; };
+		390E043F905E3298C6D663DD339BFED7 /* BRAColumn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAColumn.h; path = XlsxReaderWriter/BRAColumn.h; sourceTree = "<group>"; };
+		39ABCAD27BC56B10FCC9347FF601619B /* entropy.c */ = {isa = PBXFileReference; includeInIndex = 1; name = entropy.c; path = SSZipArchive/aes/entropy.c; sourceTree = "<group>"; };
+		3F232CEFB79F1C73CDAE290B5D7485D4 /* SSZipArchive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.release.xcconfig; sourceTree = "<group>"; };
+		3FE774FC90BC852BE3BA51ADD3BD602F /* NSDictionary+OpenXmlString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+OpenXmlString.h"; path = "XlsxReaderWriter/NSDictionary+OpenXmlString.h"; sourceTree = "<group>"; };
+		40003C102CC4EE17D50F9B81DEB839DC /* brg_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_endian.h; path = SSZipArchive/aes/brg_endian.h; sourceTree = "<group>"; };
+		434ABAFCC800DADA4E2AF85F4F7B3545 /* BRACalcChainCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACalcChainCell.h; path = XlsxReaderWriter/BRACalcChainCell.h; sourceTree = "<group>"; };
+		44E67CE393C3467D58FD7B2D0EB86E68 /* BRAComments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAComments.h; path = XlsxReaderWriter/BRAComments.h; sourceTree = "<group>"; };
+		44FE47B239C0AB590A55C5774E57E264 /* BRACellFill.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACellFill.m; path = XlsxReaderWriter/BRACellFill.m; sourceTree = "<group>"; };
+		453BF50021A109AFE0C948DAB8AB284A /* BRACalcChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACalcChain.m; path = XlsxReaderWriter/BRACalcChain.m; sourceTree = "<group>"; };
+		455F37E3B76AB098328BF881148BC0E0 /* Pods-LocalizedCSV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocalizedCSV-umbrella.h"; sourceTree = "<group>"; };
+		45D1DAEA34A0C772D83979CA81DB8D0C /* BRACellFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACellFormat.h; path = XlsxReaderWriter/BRACellFormat.h; sourceTree = "<group>"; };
+		492A0EBF9984BA087C22770BD8A27185 /* Pods-LocalizedCSV-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LocalizedCSV-frameworks.sh"; sourceTree = "<group>"; };
+		4A5384E8100390AB7DF1072E6B05F9AF /* BRAOpenXmlSubElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAOpenXmlSubElement.h; path = XlsxReaderWriter/BRAOpenXmlSubElement.h; sourceTree = "<group>"; };
+		4C67C5C8A715C22A2F63EBD9AB72089D /* XlsxReaderWriter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XlsxReaderWriter.debug.xcconfig; sourceTree = "<group>"; };
+		4CABAA64660EFD8FF1949DB5088238BE /* mztools.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mztools.c; path = SSZipArchive/minizip/mztools.c; sourceTree = "<group>"; };
+		4E951C74BAE0C17AAC51A01C47262915 /* Pods-LocalizedCSV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocalizedCSV.modulemap"; sourceTree = "<group>"; };
+		4F25E06A5E220E662B27470FFAAC586C /* BRAImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAImage.m; path = XlsxReaderWriter/BRAImage.m; sourceTree = "<group>"; };
+		5048B8C6B4691665D21327294BD7AC51 /* XlsxReaderWriter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XlsxReaderWriter.release.xcconfig; sourceTree = "<group>"; };
+		517CC7E710E04F04B73CC4A8A0BD86B6 /* Pods_LocalizedCSV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LocalizedCSV.framework; path = "Pods-LocalizedCSV.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5273538CC7F5D0A01CF4770EDD079674 /* BRACellRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACellRange.m; path = XlsxReaderWriter/BRACellRange.m; sourceTree = "<group>"; };
+		5D067A92D7B8A054A0CF8C313AC778AC /* BRAOfficeDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAOfficeDocument.m; path = XlsxReaderWriter/BRAOfficeDocument.m; sourceTree = "<group>"; };
+		5F0AEC5274D5991604C8A765D9705145 /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aestab.c; path = SSZipArchive/aes/aestab.c; sourceTree = "<group>"; };
+		5F71539ABDA15FE2B8A13194B65AF7AF /* SSZipArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.debug.xcconfig; sourceTree = "<group>"; };
+		600B8E681EA6BB59DD483215C9CB4E1C /* BRASharedStrings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRASharedStrings.m; path = XlsxReaderWriter/BRASharedStrings.m; sourceTree = "<group>"; };
+		62904AF6F2C0A01E90181C3D818BD9E3 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = SSZipArchive/minizip/crypt.h; sourceTree = "<group>"; };
+		63A01F92A009A1330B902B26EE703E55 /* BRASharedString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRASharedString.m; path = XlsxReaderWriter/BRASharedString.m; sourceTree = "<group>"; };
+		64AFE2CE257670E0AC5D9B9D874E2CF2 /* NSDictionary+DeepCopy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+DeepCopy.m"; path = "XlsxReaderWriter/NSDictionary+DeepCopy.m"; sourceTree = "<group>"; };
+		65966872615E32748808C693F87980BF /* NativeColor+HTML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NativeColor+HTML.h"; path = "XlsxReaderWriter/NativeColor+HTML.h"; sourceTree = "<group>"; };
+		66EC6291D18A4758EA4E56A4F4617AF3 /* BRAImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAImage.h; path = XlsxReaderWriter/BRAImage.h; sourceTree = "<group>"; };
+		682421AD4D089C7A8FF3A5119DDAACFA /* XMLDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMLDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		683159C68C577D7920184E09B37C2ADE /* BRAComment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAComment.m; path = XlsxReaderWriter/BRAComment.m; sourceTree = "<group>"; };
+		685A83783511DB53319A6A1116F3C234 /* XlsxReaderWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XlsxReaderWriter.framework; path = XlsxReaderWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6954E3058DEC1729DD629FD7AFFFD1A1 /* BRAWorksheetDrawing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAWorksheetDrawing.m; path = XlsxReaderWriter/BRAWorksheetDrawing.m; sourceTree = "<group>"; };
+		6AE91F61486FD1E525D99A9D8620CCE0 /* XlsxReaderWriter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = XlsxReaderWriter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6BF403BBB2258BC6FF917077D538A963 /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
+		6F2EB4E949DE70C4294A781994917143 /* Pods-LocalizedCSV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalizedCSV.release.xcconfig"; sourceTree = "<group>"; };
+		6FEBB0A061CD603E5D556BFF2EF506F6 /* BRAPlatformSpecificDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAPlatformSpecificDefines.h; path = XlsxReaderWriter/BRAPlatformSpecificDefines.h; sourceTree = "<group>"; };
+		6FF588F6FF1CB6F9E321E2167F47A11D /* BRAColumn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAColumn.m; path = XlsxReaderWriter/BRAColumn.m; sourceTree = "<group>"; };
+		71C6864183CE7070BC86DBA2B279462B /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fileenc.c; path = SSZipArchive/aes/fileenc.c; sourceTree = "<group>"; };
+		746912368D217FE6422BC5E4382F6BAE /* XlsxReaderWriter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XlsxReaderWriter-Info.plist"; sourceTree = "<group>"; };
+		75323121335E72CFD8786F963A4BDE2E /* BRAElementWithRelationships.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAElementWithRelationships.h; path = XlsxReaderWriter/BRAElementWithRelationships.h; sourceTree = "<group>"; };
+		75E132A34DD744DA93955F49E88473E1 /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pwd2key.c; path = SSZipArchive/aes/pwd2key.c; sourceTree = "<group>"; };
+		76218F2D0D109E3B0FDA26CE6F879AC7 /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = SSZipArchive/aes/aes.h; sourceTree = "<group>"; };
+		7CC7EBBC6DDA19A41AC2E7B63507B625 /* BRAOfficeDocumentPackage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAOfficeDocumentPackage.h; path = XlsxReaderWriter/BRAOfficeDocumentPackage.h; sourceTree = "<group>"; };
+		7E430FC344BEB9656ADED9BB66BEEEFC /* BRASheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRASheet.h; path = XlsxReaderWriter/BRASheet.h; sourceTree = "<group>"; };
+		7FFEF86938C01E0156D4883D5E6D47E0 /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
+		8015298DA69975E9C8B82EA5DA5BBFCC /* BRAMergeCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAMergeCell.h; path = XlsxReaderWriter/BRAMergeCell.h; sourceTree = "<group>"; };
+		80F236C05E347EAE3FD295CEB1D716B3 /* BRAOfficeDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAOfficeDocument.h; path = XlsxReaderWriter/BRAOfficeDocument.h; sourceTree = "<group>"; };
+		86B49D721436C151DB0C093BEB47A110 /* BRAOpenXmlElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAOpenXmlElement.m; path = XlsxReaderWriter/BRAOpenXmlElement.m; sourceTree = "<group>"; };
+		877AA53E2FFB03BF8A4C1EF84974E52B /* BRATheme.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRATheme.m; path = XlsxReaderWriter/BRATheme.m; sourceTree = "<group>"; };
+		8923D61B1ABE13BC6DBB8367360D167A /* BRACalcChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACalcChain.h; path = XlsxReaderWriter/BRACalcChain.h; sourceTree = "<group>"; };
+		8945C8CF10E3D813C748B3BDF3760924 /* BRAVmlDrawing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAVmlDrawing.m; path = XlsxReaderWriter/BRAVmlDrawing.m; sourceTree = "<group>"; };
+		897C28CED35D645087D00A8E0FADB568 /* BRACellFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACellFormat.m; path = XlsxReaderWriter/BRACellFormat.m; sourceTree = "<group>"; };
+		8A5C2822E86F00B0448326EDE6F57E5B /* BRAContentTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAContentTypes.m; path = XlsxReaderWriter/BRAContentTypes.m; sourceTree = "<group>"; };
+		8C4FF04636AD5BA9E092CFC479BD8F85 /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/ZipArchive.h; sourceTree = "<group>"; };
+		907533CB5C15F8BA5B5E0181097D7BB5 /* BRASharedString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRASharedString.h; path = XlsxReaderWriter/BRASharedString.h; sourceTree = "<group>"; };
+		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive.framework; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F6A89FEEA178817E10D16ADD9ECB87 /* NSDictionary+OpenXMLDictionaryParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+OpenXMLDictionaryParser.m"; path = "XlsxReaderWriter/NSDictionary+OpenXMLDictionaryParser.m"; sourceTree = "<group>"; };
+		9363D8C8C94AD943360CB7AEAC7C2B4C /* BRAElementWithRelationships.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAElementWithRelationships.m; path = XlsxReaderWriter/BRAElementWithRelationships.m; sourceTree = "<group>"; };
+		9C15F56F4CBF31EC14EA24501E9E7575 /* BRASharedStrings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRASharedStrings.h; path = XlsxReaderWriter/BRASharedStrings.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0E0B8841C48BCA6F61612D6B5C10D35 /* BRASheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRASheet.m; path = XlsxReaderWriter/BRASheet.m; sourceTree = "<group>"; };
+		A218435A6DC2E23727940F52037AF1E5 /* BRAWorksheetDrawing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAWorksheetDrawing.h; path = XlsxReaderWriter/BRAWorksheetDrawing.h; sourceTree = "<group>"; };
+		A392931CD2302025E479E9A586F52CE7 /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
+		A4E90AF5C7E6A4CF6116BD6DFCD2D767 /* BRAWorksheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAWorksheet.h; path = XlsxReaderWriter/BRAWorksheet.h; sourceTree = "<group>"; };
+		A598A248F9F16E7D149A17021379FEEE /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
+		A98C19652F821F9615A5CF38448665FF /* BRAContentTypesDefaultExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAContentTypesDefaultExtension.h; path = XlsxReaderWriter/BRAContentTypesDefaultExtension.h; sourceTree = "<group>"; };
+		ADB1E4CCC6A68B3C0AD3AA671C47979E /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
+		ADCD71F6B860D04EEE2D18AE3A6B14A3 /* BRAOfficeDocumentPackage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAOfficeDocumentPackage.m; path = XlsxReaderWriter/BRAOfficeDocumentPackage.m; sourceTree = "<group>"; };
+		AEE373780BF818AD3B7E85B1A9A4D39B /* BRARelationships.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRARelationships.h; path = XlsxReaderWriter/BRARelationships.h; sourceTree = "<group>"; };
+		B04D3D2841E09BE2FE0A2A07AB62650D /* BRAContentTypesOverride.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRAContentTypesOverride.h; path = XlsxReaderWriter/BRAContentTypesOverride.h; sourceTree = "<group>"; };
+		B37E138045CD83A6E1F669AA82E9D1E9 /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = SSZipArchive/aes/hmac.h; sourceTree = "<group>"; };
+		B3CDB699C4C1606C4BB20A4C84E43A89 /* BRARelatedToColumnAndRowProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRARelatedToColumnAndRowProtocol.h; path = XlsxReaderWriter/BRARelatedToColumnAndRowProtocol.h; sourceTree = "<group>"; };
+		B4E363F569C7ABC98ABFE0D8C1696DE7 /* XlsxReaderWriter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XlsxReaderWriter-umbrella.h"; sourceTree = "<group>"; };
+		B62DA3D999D9E445FC082CD9ED6E6DB1 /* BRARow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRARow.h; path = XlsxReaderWriter/BRARow.h; sourceTree = "<group>"; };
+		B8E71AB7BF97736C5D4AD707F9ACE676 /* aesopt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aesopt.h; path = SSZipArchive/aes/aesopt.h; sourceTree = "<group>"; };
+		B94515418A4D55D5B367C73C24792E9A /* Pods-LocalizedCSV-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocalizedCSV-Info.plist"; sourceTree = "<group>"; };
+		B9D4DD56B6FF05C1EEB7770F4C7A4D85 /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
+		BD32A8CF0778EF1648629B2516E44EF2 /* XlsxReaderWriter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XlsxReaderWriter.modulemap; sourceTree = "<group>"; };
+		BF3B69D44DBFE6780C80B508E8B2E88C /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aeskey.c; path = SSZipArchive/aes/aeskey.c; sourceTree = "<group>"; };
+		C35379F34FFF8D36B26F05D867734714 /* pwd2key.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pwd2key.h; path = SSZipArchive/aes/pwd2key.h; sourceTree = "<group>"; };
+		C81EFFFE782E9DA5362138F165E0E6B1 /* XMLDictionary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XMLDictionary-Info.plist"; sourceTree = "<group>"; };
+		C8583A83746A8EE85B30AB17883C3185 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C9D10D63EBB783DD714A6E9228B6EF00 /* XMLDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XMLDictionary.framework; path = XMLDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2A258B8A7C8A50E630972428179B3D /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
+		CA5BACF159F1FC48C54A111A468F3787 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		CAC9A7B79412041756948ED9F5DF3715 /* BRACellRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACellRange.h; path = XlsxReaderWriter/BRACellRange.h; sourceTree = "<group>"; };
+		CB29D8A7B37C148C27F5637C1EF1D90D /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aescrypt.c; path = SSZipArchive/aes/aescrypt.c; sourceTree = "<group>"; };
+		CB900CDBFBCA0A713DB12BB0FC1A4D1C /* NativeColor+HTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NativeColor+HTML.m"; path = "XlsxReaderWriter/NativeColor+HTML.m"; sourceTree = "<group>"; };
+		CBD1952A6DD9E216054CD16C9765E1B5 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
+		CCA000D8C36BBE243DC3D3C7B8BF8C73 /* BRADrawing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRADrawing.h; path = XlsxReaderWriter/BRADrawing.h; sourceTree = "<group>"; };
+		CE4339AE62006DC850F4ED93B469453B /* aes_via_ace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes_via_ace.h; path = SSZipArchive/aes/aes_via_ace.h; sourceTree = "<group>"; };
+		D2369CF8431800DD94EB08F8BD71C448 /* NSDictionary+OpenXMLDictionaryParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+OpenXMLDictionaryParser.h"; path = "XlsxReaderWriter/NSDictionary+OpenXMLDictionaryParser.h"; sourceTree = "<group>"; };
+		D249F7B53A381096EE74C1E8CFFEDDAC /* brg_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_types.h; path = SSZipArchive/aes/brg_types.h; sourceTree = "<group>"; };
+		D6C995B7A6D7870A5149662EC554D439 /* Pods-LocalizedCSV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocalizedCSV.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7DA0DFA4E1954BD98FC3D550836B1B /* BRAWorksheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRAWorksheet.m; path = XlsxReaderWriter/BRAWorksheet.m; sourceTree = "<group>"; };
+		DAA962F9DD3A67104D192FA1B0A83338 /* NativeFont+BoldItalic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NativeFont+BoldItalic.m"; path = "XlsxReaderWriter/NativeFont+BoldItalic.m"; sourceTree = "<group>"; };
+		DF46506448D3E46C0591A9A281746C98 /* XMLDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XMLDictionary.h; path = XMLDictionary/XMLDictionary.h; sourceTree = "<group>"; };
+		DFF3819FBA34ABC7602A587C5D323D12 /* BRANumberFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRANumberFormat.h; path = XlsxReaderWriter/BRANumberFormat.h; sourceTree = "<group>"; };
+		E1C69BF48E3BFE86D332A309479999B0 /* XlsxReaderWriter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XlsxReaderWriter-dummy.m"; sourceTree = "<group>"; };
+		E23FADF8C9C064B68853439E54596E1E /* BRARow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRARow.m; path = XlsxReaderWriter/BRARow.m; sourceTree = "<group>"; };
+		E2440829922FD9010DECA1AD00C2D632 /* aestab.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aestab.h; path = SSZipArchive/aes/aestab.h; sourceTree = "<group>"; };
+		E281C3E30E7AB25F0AF8CF8863BFF105 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
+		E595C04E453661E4CB874A7F20228906 /* XMLDictionary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XMLDictionary-dummy.m"; sourceTree = "<group>"; };
+		E6C1BBA59A87D35F966BA30C0ABA3044 /* BRARelationship.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRARelationship.m; path = XlsxReaderWriter/BRARelationship.m; sourceTree = "<group>"; };
+		E6F9DD75909CE4306706382E836B05FA /* XlsxReaderWriter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XlsxReaderWriter-prefix.pch"; sourceTree = "<group>"; };
+		E9A14217DD31F80B91E406EDD09AF491 /* entropy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = entropy.h; path = SSZipArchive/aes/entropy.h; sourceTree = "<group>"; };
+		EA162F94EF4F4D6E1716E1448153AD8F /* Pods-LocalizedCSV-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocalizedCSV-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EE6FC6703750BCFEF6D2B8DBFBF1045B /* XlsxReaderWriter-swift-bridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XlsxReaderWriter-swift-bridge.h"; path = "XlsxReaderWriter/XlsxReaderWriter-swift-bridge.h"; sourceTree = "<group>"; };
+		F04057FEC8243F9F8FE6C14890B83D43 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F20AFB345D884A494C8610DC5630A93E /* mztools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mztools.h; path = SSZipArchive/minizip/mztools.h; sourceTree = "<group>"; };
+		F2B5391B22D733F5D3EB3EFF49CA06B6 /* BRACalcChainCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRACalcChainCell.m; path = XlsxReaderWriter/BRACalcChainCell.m; sourceTree = "<group>"; };
+		F879BF0210B0F548FBA599281563473B /* XMLDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMLDictionary.debug.xcconfig; sourceTree = "<group>"; };
+		F8BAB7C62D7C7159B323E011D797C964 /* XMLDictionary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMLDictionary-umbrella.h"; sourceTree = "<group>"; };
+		F9E91C64E7CE089F5AC3615042BA1A33 /* BRATheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRATheme.h; path = XlsxReaderWriter/BRATheme.h; sourceTree = "<group>"; };
+		FC6E65DF90DA3300FB8847A91313AA76 /* BRACell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRACell.h; path = XlsxReaderWriter/BRACell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F649B2260FAF85303F6132243984B90B /* Frameworks */ = {
+		339EB30E790EE5C549A0E7721CD7593F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B87C0581A5BEEA4751F19309A5492F /* Cocoa.framework in Frameworks */,
+				38F1E35A9B15B0909A079B3FD3E88DEA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38C62A3B67B412F5DD82B1A18503CCE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				611F81EE81475D880A7B37D9E974461E /* Cocoa.framework in Frameworks */,
+				158258177BF51AFF492FBF59F207136A /* SSZipArchive.framework in Frameworks */,
+				5620976AF00D34CD8B340BDB6CD2FA72 /* XMLDictionary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4042EA01D5561E881645ABE0B8385C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEF04E442C7C59AAB47583398B7EBA0 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5BD54CA32375D727DB732BAE08B2DE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E721FB72F42B8DA2EA6905D696A6B528 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04C068A18C5413F804A2959126093416 /* OS X */ = {
+		04A3C54FB6E57C376DFE4A1A36B3F655 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
+				BD32A8CF0778EF1648629B2516E44EF2 /* XlsxReaderWriter.modulemap */,
+				E1C69BF48E3BFE86D332A309479999B0 /* XlsxReaderWriter-dummy.m */,
+				746912368D217FE6422BC5E4382F6BAE /* XlsxReaderWriter-Info.plist */,
+				E6F9DD75909CE4306706382E836B05FA /* XlsxReaderWriter-prefix.pch */,
+				B4E363F569C7ABC98ABFE0D8C1696DE7 /* XlsxReaderWriter-umbrella.h */,
+				4C67C5C8A715C22A2F63EBD9AB72089D /* XlsxReaderWriter.debug.xcconfig */,
+				5048B8C6B4691665D21327294BD7AC51 /* XlsxReaderWriter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../Target Support Files/XlsxReaderWriter";
+			sourceTree = "<group>";
+		};
+		07FA524258816206C9421C870949A246 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B1E7AED9F9FEE9A4508E4942E4BD00A /* XlsxReaderWriter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		0B168303D82970E252A9504537C46975 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				291C25BE7116C587956F8DC9AE5119F9 /* Pods-LocalizedCSV */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		0B1E7AED9F9FEE9A4508E4942E4BD00A /* XlsxReaderWriter */ = {
+			isa = PBXGroup;
+			children = (
+				8923D61B1ABE13BC6DBB8367360D167A /* BRACalcChain.h */,
+				453BF50021A109AFE0C948DAB8AB284A /* BRACalcChain.m */,
+				434ABAFCC800DADA4E2AF85F4F7B3545 /* BRACalcChainCell.h */,
+				F2B5391B22D733F5D3EB3EFF49CA06B6 /* BRACalcChainCell.m */,
+				FC6E65DF90DA3300FB8847A91313AA76 /* BRACell.h */,
+				31C00E147CEF038FA5E3E79C5C150716 /* BRACell.m */,
+				363391A729B18774AEA68DBEDDA6A315 /* BRACellFill.h */,
+				44FE47B239C0AB590A55C5774E57E264 /* BRACellFill.m */,
+				45D1DAEA34A0C772D83979CA81DB8D0C /* BRACellFormat.h */,
+				897C28CED35D645087D00A8E0FADB568 /* BRACellFormat.m */,
+				CAC9A7B79412041756948ED9F5DF3715 /* BRACellRange.h */,
+				5273538CC7F5D0A01CF4770EDD079674 /* BRACellRange.m */,
+				390E043F905E3298C6D663DD339BFED7 /* BRAColumn.h */,
+				6FF588F6FF1CB6F9E321E2167F47A11D /* BRAColumn.m */,
+				014846B06FF978747213D8E6EC67FEB8 /* BRAComment.h */,
+				683159C68C577D7920184E09B37C2ADE /* BRAComment.m */,
+				44E67CE393C3467D58FD7B2D0EB86E68 /* BRAComments.h */,
+				0E6B7F73F95F70D2750A46A5DCA2E560 /* BRAComments.m */,
+				0F68A8B00D76314DB525E867159CBF39 /* BRAContentTypes.h */,
+				8A5C2822E86F00B0448326EDE6F57E5B /* BRAContentTypes.m */,
+				A98C19652F821F9615A5CF38448665FF /* BRAContentTypesDefaultExtension.h */,
+				0D2C06F7F3E50512E166B3FCAB0050E3 /* BRAContentTypesDefaultExtension.m */,
+				B04D3D2841E09BE2FE0A2A07AB62650D /* BRAContentTypesOverride.h */,
+				099148D21D0184F4AE30E17103DB9532 /* BRAContentTypesOverride.m */,
+				CCA000D8C36BBE243DC3D3C7B8BF8C73 /* BRADrawing.h */,
+				2FE6BE22D31DBEE56605460037245E30 /* BRADrawing.m */,
+				75323121335E72CFD8786F963A4BDE2E /* BRAElementWithRelationships.h */,
+				9363D8C8C94AD943360CB7AEAC7C2B4C /* BRAElementWithRelationships.m */,
+				66EC6291D18A4758EA4E56A4F4617AF3 /* BRAImage.h */,
+				4F25E06A5E220E662B27470FFAAC586C /* BRAImage.m */,
+				8015298DA69975E9C8B82EA5DA5BBFCC /* BRAMergeCell.h */,
+				2DCB0669A0A7F7A3C8D727E0C4E0E55D /* BRAMergeCell.m */,
+				DFF3819FBA34ABC7602A587C5D323D12 /* BRANumberFormat.h */,
+				2FCF9B5CBB2915D2380583992F5AD4D9 /* BRANumberFormat.m */,
+				80F236C05E347EAE3FD295CEB1D716B3 /* BRAOfficeDocument.h */,
+				5D067A92D7B8A054A0CF8C313AC778AC /* BRAOfficeDocument.m */,
+				7CC7EBBC6DDA19A41AC2E7B63507B625 /* BRAOfficeDocumentPackage.h */,
+				ADCD71F6B860D04EEE2D18AE3A6B14A3 /* BRAOfficeDocumentPackage.m */,
+				36EB4FD88DA2CEB7714756AB9DAFE956 /* BRAOpenXmlElement.h */,
+				86B49D721436C151DB0C093BEB47A110 /* BRAOpenXmlElement.m */,
+				4A5384E8100390AB7DF1072E6B05F9AF /* BRAOpenXmlSubElement.h */,
+				33F26C7FAABECE46001C1BDDCF3EFC12 /* BRAOpenXmlSubElement.m */,
+				6FEBB0A061CD603E5D556BFF2EF506F6 /* BRAPlatformSpecificDefines.h */,
+				B3CDB699C4C1606C4BB20A4C84E43A89 /* BRARelatedToColumnAndRowProtocol.h */,
+				2D3E43DFB0A17792B6742B1AF504D106 /* BRARelationship.h */,
+				E6C1BBA59A87D35F966BA30C0ABA3044 /* BRARelationship.m */,
+				AEE373780BF818AD3B7E85B1A9A4D39B /* BRARelationships.h */,
+				07496741B8EAFD282064A340BDDBAE0A /* BRARelationships.m */,
+				B62DA3D999D9E445FC082CD9ED6E6DB1 /* BRARow.h */,
+				E23FADF8C9C064B68853439E54596E1E /* BRARow.m */,
+				907533CB5C15F8BA5B5E0181097D7BB5 /* BRASharedString.h */,
+				63A01F92A009A1330B902B26EE703E55 /* BRASharedString.m */,
+				9C15F56F4CBF31EC14EA24501E9E7575 /* BRASharedStrings.h */,
+				600B8E681EA6BB59DD483215C9CB4E1C /* BRASharedStrings.m */,
+				7E430FC344BEB9656ADED9BB66BEEEFC /* BRASheet.h */,
+				A0E0B8841C48BCA6F61612D6B5C10D35 /* BRASheet.m */,
+				11A833B1030AD9709207013A94FDCA97 /* BRAStyles.h */,
+				0BCB33A3FD3A98641C3D172A5BB169FC /* BRAStyles.m */,
+				F9E91C64E7CE089F5AC3615042BA1A33 /* BRATheme.h */,
+				877AA53E2FFB03BF8A4C1EF84974E52B /* BRATheme.m */,
+				08A67C778EB8FF67F3FA6910C8A29E47 /* BRAVmlDrawing.h */,
+				8945C8CF10E3D813C748B3BDF3760924 /* BRAVmlDrawing.m */,
+				A4E90AF5C7E6A4CF6116BD6DFCD2D767 /* BRAWorksheet.h */,
+				DA7DA0DFA4E1954BD98FC3D550836B1B /* BRAWorksheet.m */,
+				A218435A6DC2E23727940F52037AF1E5 /* BRAWorksheetDrawing.h */,
+				6954E3058DEC1729DD629FD7AFFFD1A1 /* BRAWorksheetDrawing.m */,
+				65966872615E32748808C693F87980BF /* NativeColor+HTML.h */,
+				CB900CDBFBCA0A713DB12BB0FC1A4D1C /* NativeColor+HTML.m */,
+				1510C4D95C01C474685E3D165B84317C /* NativeColor+OpenXML.h */,
+				0CB15A1F123056A4DD6DFDAD9EBBDD3F /* NativeColor+OpenXML.m */,
+				1074DA4A104830C51F2FACDF947DA048 /* NativeFont+BoldItalic.h */,
+				DAA962F9DD3A67104D192FA1B0A83338 /* NativeFont+BoldItalic.m */,
+				1C59009016FDC2FCF278DE21A8B9ACDB /* NSDictionary+DeepCopy.h */,
+				64AFE2CE257670E0AC5D9B9D874E2CF2 /* NSDictionary+DeepCopy.m */,
+				D2369CF8431800DD94EB08F8BD71C448 /* NSDictionary+OpenXMLDictionaryParser.h */,
+				92F6A89FEEA178817E10D16ADD9ECB87 /* NSDictionary+OpenXMLDictionaryParser.m */,
+				3FE774FC90BC852BE3BA51ADD3BD602F /* NSDictionary+OpenXmlString.h */,
+				2C09A0F9A0FB421DC38B7C6D231B53C1 /* NSDictionary+OpenXmlString.m */,
+				EE6FC6703750BCFEF6D2B8DBFBF1045B /* XlsxReaderWriter-swift-bridge.h */,
+				FEEF4F521DEEEC6B96A83D07E2D19936 /* Pod */,
+				04A3C54FB6E57C376DFE4A1A36B3F655 /* Support Files */,
+			);
+			name = XlsxReaderWriter;
+			path = "Local Podspecs/XlsxReaderWriter";
+			sourceTree = "<group>";
+		};
+		1A5952FB39AF6436732746706217506A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F59595ACBA8AB86BD0154F873C3C81AE /* SSZipArchive */,
+				A9DEC1903B098E8A43B5A281FB21CFDB /* XMLDictionary */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1B60B05428DEA050EABCDCC90459BB6A /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				CA5BACF159F1FC48C54A111A468F3787 /* Cocoa.framework */,
 			);
 			name = "OS X";
 			sourceTree = "<group>";
 		};
-		2A555A7FF80F6D83D4780CD73D6388BF /* Pods-LocalizedCSV */ = {
+		291C25BE7116C587956F8DC9AE5119F9 /* Pods-LocalizedCSV */ = {
 			isa = PBXGroup;
 			children = (
-				20AFC85777A01C1DD2366C8E43550602 /* Info.plist */,
-				F0DEA104E34C735A2C9CBC0585FD2455 /* Pods-LocalizedCSV.modulemap */,
-				31DD98565764B7E232F865B0B730FBE7 /* Pods-LocalizedCSV-acknowledgements.markdown */,
-				5C301235D1963EA686FDE8F1C028BDB9 /* Pods-LocalizedCSV-acknowledgements.plist */,
-				0FD0C89424BDB973E89D3028674AC3C8 /* Pods-LocalizedCSV-dummy.m */,
-				D451ECB4E2DCFCBB1C6101E09E83458F /* Pods-LocalizedCSV-frameworks.sh */,
-				8D68F9907F2B84662275DBF3ABCDAC1D /* Pods-LocalizedCSV-resources.sh */,
-				34E8B0D35E500DBABCD3C95FFC707704 /* Pods-LocalizedCSV-umbrella.h */,
-				8AB73453CB8AD114E28CA343ABEAE218 /* Pods-LocalizedCSV.debug.xcconfig */,
-				C8C5B376880F9AD7A82CA3239B530259 /* Pods-LocalizedCSV.release.xcconfig */,
+				4E951C74BAE0C17AAC51A01C47262915 /* Pods-LocalizedCSV.modulemap */,
+				EA162F94EF4F4D6E1716E1448153AD8F /* Pods-LocalizedCSV-acknowledgements.markdown */,
+				0CE69027544196C002EF489E7597E930 /* Pods-LocalizedCSV-acknowledgements.plist */,
+				3286621937C3FA1599FA8090F587F383 /* Pods-LocalizedCSV-dummy.m */,
+				492A0EBF9984BA087C22770BD8A27185 /* Pods-LocalizedCSV-frameworks.sh */,
+				B94515418A4D55D5B367C73C24792E9A /* Pods-LocalizedCSV-Info.plist */,
+				455F37E3B76AB098328BF881148BC0E0 /* Pods-LocalizedCSV-umbrella.h */,
+				D6C995B7A6D7870A5149662EC554D439 /* Pods-LocalizedCSV.debug.xcconfig */,
+				6F2EB4E949DE70C4294A781994917143 /* Pods-LocalizedCSV.release.xcconfig */,
 			);
 			name = "Pods-LocalizedCSV";
 			path = "Target Support Files/Pods-LocalizedCSV";
 			sourceTree = "<group>";
 		};
-		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+		5A26150FEE3F976FAE48B29094A70C6D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				04C068A18C5413F804A2959126093416 /* OS X */,
+				2FC6373ED2EC007D479D449D79B7013F /* SSZipArchive.modulemap */,
+				3235BF72033172FB0DF688916A54C062 /* SSZipArchive-dummy.m */,
+				0A43575B86CD737349D744D67DC2D24C /* SSZipArchive-Info.plist */,
+				B9D4DD56B6FF05C1EEB7770F4C7A4D85 /* SSZipArchive-prefix.pch */,
+				A392931CD2302025E479E9A586F52CE7 /* SSZipArchive-umbrella.h */,
+				5F71539ABDA15FE2B8A13194B65AF7AF /* SSZipArchive.debug.xcconfig */,
+				3F232CEFB79F1C73CDAE290B5D7485D4 /* SSZipArchive.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSZipArchive";
+			sourceTree = "<group>";
+		};
+		6D74A85788A00344E373E6FD66BBF7D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				517CC7E710E04F04B73CC4A8A0BD86B6 /* Pods_LocalizedCSV.framework */,
+				91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */,
+				685A83783511DB53319A6A1116F3C234 /* XlsxReaderWriter.framework */,
+				C9D10D63EBB783DD714A6E9228B6EF00 /* XMLDictionary.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FA7D61755C44B97AABFBCA3AB88356D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1295CD6624C9BB91182A6839852BA8A0 /* SSZipArchive.framework */,
+				682421AD4D089C7A8FF3A5119DDAACFA /* XMLDictionary.framework */,
+				1B60B05428DEA050EABCDCC90459BB6A /* OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		9785C225E7CF4A317FF8BE17ED29EACC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				96EF82A6211A4F7C2C4B1289E24714BA /* Products */,
-				91CF5CC3DA1CFD9DAA1B14A8CEE0F274 /* Targets Support Files */,
+				1CBB04610015CB768EE75A3AFE7E46C2 /* XMLDictionary.modulemap */,
+				E595C04E453661E4CB874A7F20228906 /* XMLDictionary-dummy.m */,
+				C81EFFFE782E9DA5362138F165E0E6B1 /* XMLDictionary-Info.plist */,
+				1947AD53AAE100EC19C66E45F2BDE446 /* XMLDictionary-prefix.pch */,
+				F8BAB7C62D7C7159B323E011D797C964 /* XMLDictionary-umbrella.h */,
+				F879BF0210B0F548FBA599281563473B /* XMLDictionary.debug.xcconfig */,
+				204B7777B79FA93A5E53BCFDF1B040EE /* XMLDictionary.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XMLDictionary";
+			sourceTree = "<group>";
+		};
+		A9DEC1903B098E8A43B5A281FB21CFDB /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				DF46506448D3E46C0591A9A281746C98 /* XMLDictionary.h */,
+				217CD36CD7C0B22F3EC59AF0043A7E38 /* XMLDictionary.m */,
+				9785C225E7CF4A317FF8BE17ED29EACC /* Support Files */,
+			);
+			name = XMLDictionary;
+			path = XMLDictionary;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				07FA524258816206C9421C870949A246 /* Development Pods */,
+				7FA7D61755C44B97AABFBCA3AB88356D /* Frameworks */,
+				1A5952FB39AF6436732746706217506A /* Pods */,
+				6D74A85788A00344E373E6FD66BBF7D0 /* Products */,
+				0B168303D82970E252A9504537C46975 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		91CF5CC3DA1CFD9DAA1B14A8CEE0F274 /* Targets Support Files */ = {
+		F59595ACBA8AB86BD0154F873C3C81AE /* SSZipArchive */ = {
 			isa = PBXGroup;
 			children = (
-				2A555A7FF80F6D83D4780CD73D6388BF /* Pods-LocalizedCSV */,
+				76218F2D0D109E3B0FDA26CE6F879AC7 /* aes.h */,
+				CE4339AE62006DC850F4ED93B469453B /* aes_via_ace.h */,
+				CB29D8A7B37C148C27F5637C1EF1D90D /* aescrypt.c */,
+				BF3B69D44DBFE6780C80B508E8B2E88C /* aeskey.c */,
+				B8E71AB7BF97736C5D4AD707F9ACE676 /* aesopt.h */,
+				5F0AEC5274D5991604C8A765D9705145 /* aestab.c */,
+				E2440829922FD9010DECA1AD00C2D632 /* aestab.h */,
+				40003C102CC4EE17D50F9B81DEB839DC /* brg_endian.h */,
+				D249F7B53A381096EE74C1E8CFFEDDAC /* brg_types.h */,
+				62904AF6F2C0A01E90181C3D818BD9E3 /* crypt.h */,
+				39ABCAD27BC56B10FCC9347FF601619B /* entropy.c */,
+				E9A14217DD31F80B91E406EDD09AF491 /* entropy.h */,
+				71C6864183CE7070BC86DBA2B279462B /* fileenc.c */,
+				1A2E93C8BCCEA471B15313DA7ED8467B /* fileenc.h */,
+				3189CD688825D24EEE6F21811B0585A4 /* hmac.c */,
+				B37E138045CD83A6E1F669AA82E9D1E9 /* hmac.h */,
+				E281C3E30E7AB25F0AF8CF8863BFF105 /* ioapi.c */,
+				7FFEF86938C01E0156D4883D5E6D47E0 /* ioapi.h */,
+				4CABAA64660EFD8FF1949DB5088238BE /* mztools.c */,
+				F20AFB345D884A494C8610DC5630A93E /* mztools.h */,
+				0C7B336FC1251BBAE75854DCAF9D646F /* prng.c */,
+				302B1E362463F082DBC01BFE0A6D460D /* prng.h */,
+				75E132A34DD744DA93955F49E88473E1 /* pwd2key.c */,
+				C35379F34FFF8D36B26F05D867734714 /* pwd2key.h */,
+				006FF0A1B40CA93C061016B9E38C2F35 /* sha1.c */,
+				1C42C91316A94DC1E0083555DA2FD30E /* sha1.h */,
+				6BF403BBB2258BC6FF917077D538A963 /* SSZipArchive.h */,
+				13AAC5601908F11E1F222EB22F93D988 /* SSZipArchive.m */,
+				CA2A258B8A7C8A50E630972428179B3D /* SSZipCommon.h */,
+				ADB1E4CCC6A68B3C0AD3AA671C47979E /* unzip.c */,
+				CBD1952A6DD9E216054CD16C9765E1B5 /* unzip.h */,
+				A598A248F9F16E7D149A17021379FEEE /* zip.c */,
+				09FCA0CE27AE51ED4CC6755FE754D5B1 /* zip.h */,
+				8C4FF04636AD5BA9E092CFC479BD8F85 /* ZipArchive.h */,
+				5A26150FEE3F976FAE48B29094A70C6D /* Support Files */,
 			);
-			name = "Targets Support Files";
+			name = SSZipArchive;
+			path = SSZipArchive;
 			sourceTree = "<group>";
 		};
-		96EF82A6211A4F7C2C4B1289E24714BA /* Products */ = {
+		FEEF4F521DEEEC6B96A83D07E2D19936 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				B50C1287CEBA09620FFB6AA4B460EF6E /* Pods_LocalizedCSV.framework */,
+				C8583A83746A8EE85B30AB17883C3185 /* LICENSE */,
+				F04057FEC8243F9F8FE6C14890B83D43 /* README.md */,
+				6AE91F61486FD1E525D99A9D8620CCE0 /* XlsxReaderWriter.podspec */,
 			);
-			name = Products;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0051B87F5236A8E0A4A699B442F90BCC /* Headers */ = {
+		280B455E561DAC2938C31A758457110D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58DE4E8E26A5BD1330440139C20641E6 /* Pods-LocalizedCSV-umbrella.h in Headers */,
+				1180F471B02D228F5D2EE2BBB54AF649 /* aes.h in Headers */,
+				067E134405870BDFDB75382CAD895454 /* aes_via_ace.h in Headers */,
+				A9EAEC19260EB4FB2BC7AF486ABDC3DD /* aesopt.h in Headers */,
+				166ECBDC1F808AC6735BFC9809AA7DF8 /* aestab.h in Headers */,
+				80CE2E87A22C1C6584BBE033CC04D2B5 /* brg_endian.h in Headers */,
+				8D87F44D65684893E0D02E14FCFF69D6 /* brg_types.h in Headers */,
+				AE26BBC9062678B9146DF151610EBD1F /* crypt.h in Headers */,
+				C46504AE4A5C8AFEF536EB59794B4E92 /* entropy.h in Headers */,
+				8D5B7E38D494DFA3FCFF31C3702D8F66 /* fileenc.h in Headers */,
+				8F38877378972CED83E3874F35F243E5 /* hmac.h in Headers */,
+				A10500761FE8174C32BC94BBC4D8E117 /* ioapi.h in Headers */,
+				3735AC183F439D566562C5E1C505FFDD /* mztools.h in Headers */,
+				17F739924F53D88214D6D6A784BC8A7A /* prng.h in Headers */,
+				7E9609401076B71119CCC611945D79BE /* pwd2key.h in Headers */,
+				583877D42378E890F962DEDC5D46A594 /* sha1.h in Headers */,
+				0C8083E8012197E0D8CE30350B3F7349 /* SSZipArchive-umbrella.h in Headers */,
+				9D6526C697ECF24D57A199CDE6CCA0A8 /* SSZipArchive.h in Headers */,
+				479764595245C32C80B5BE5FFB3E796F /* SSZipCommon.h in Headers */,
+				413653D62774A57B52E265D555263F7A /* unzip.h in Headers */,
+				157F83DDA197192241063E49011ADB71 /* zip.h in Headers */,
+				7235CBFD3BED622C47D8888DFD126525 /* ZipArchive.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BD4DCAFEE4D2D1527E455024EB06630 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4BE358A1E31F484607EB792F403B25 /* BRACalcChain.h in Headers */,
+				CE4FFF617A8481CEB4088798C1111FEC /* BRACalcChainCell.h in Headers */,
+				71F8D16A67F51ECC2FBE7D51259BDAF1 /* BRACell.h in Headers */,
+				99BC8E9E1A71E62CA0FCE787187218D8 /* BRACellFill.h in Headers */,
+				0D2B888704D40DD13229E736BB04AEA6 /* BRACellFormat.h in Headers */,
+				E0B5DF597DF19E7CB50B770AC8F151B7 /* BRACellRange.h in Headers */,
+				23580C795A0EEFDC60EF7F1A7E6E0FAB /* BRAColumn.h in Headers */,
+				9D5B98677943CBFA29CB60222218198A /* BRAComment.h in Headers */,
+				A23D16E8071678055D9334EDC44591CB /* BRAComments.h in Headers */,
+				D79968559A11ADE5E40D1E647CCFDB6F /* BRAContentTypes.h in Headers */,
+				1E0079DA8AA03117530745766A0BAA61 /* BRAContentTypesDefaultExtension.h in Headers */,
+				5628690836B9B0BAE31CA9BC4ECDE9C5 /* BRAContentTypesOverride.h in Headers */,
+				899A311E2009B99DB19A9F27A0C3BDA8 /* BRADrawing.h in Headers */,
+				E97DB1A92939B293CE8AF47A93B85617 /* BRAElementWithRelationships.h in Headers */,
+				49F8A17A460AC982DF530DB57DBD4C72 /* BRAImage.h in Headers */,
+				BE5D35D5D8C7DB5EFEA8E386482179BB /* BRAMergeCell.h in Headers */,
+				C8C00EA4E92F730BE6290783A73F033D /* BRANumberFormat.h in Headers */,
+				12582C7C436C3AEF588D7EECB59886D9 /* BRAOfficeDocument.h in Headers */,
+				B7AC02F70A4C1B1E4BDA70E157640C13 /* BRAOfficeDocumentPackage.h in Headers */,
+				CAE095BE779A5F9D9483A739920832E2 /* BRAOpenXmlElement.h in Headers */,
+				3147501880198551AD822D1F898301FA /* BRAOpenXmlSubElement.h in Headers */,
+				9426974F8B768D6F5FCEC1DA5CE7463C /* BRAPlatformSpecificDefines.h in Headers */,
+				17726FF7B04418A8D2B7A6309E4220FD /* BRARelatedToColumnAndRowProtocol.h in Headers */,
+				D947BFA676C21097443CE1ABB06B5E2E /* BRARelationship.h in Headers */,
+				3C93F0F8A3526C5D80BF49C52263ABF4 /* BRARelationships.h in Headers */,
+				E4C5D169EB585D1457EADE24398A510E /* BRARow.h in Headers */,
+				81E49EA8848AE1141E120036E149CFE3 /* BRASharedString.h in Headers */,
+				F713B7BB124C30333D7278F4AA1FDF67 /* BRASharedStrings.h in Headers */,
+				02C841F7EF8746B3C85ADB48D5EF67B7 /* BRASheet.h in Headers */,
+				AB083B390993096ECCD970E4D245FAA7 /* BRAStyles.h in Headers */,
+				849B7E09DAE5224A85966A9DCDBFF085 /* BRATheme.h in Headers */,
+				F391710D5B038A6EC5BC792266726206 /* BRAVmlDrawing.h in Headers */,
+				BF9DD08C427ACF958310E050B7163EFB /* BRAWorksheet.h in Headers */,
+				42D584071FAB112B34687B6E447FA484 /* BRAWorksheetDrawing.h in Headers */,
+				677A8624188D135BE64AA46583386861 /* NativeColor+HTML.h in Headers */,
+				A82F9E388A02D516116640FC76C57241 /* NativeColor+OpenXML.h in Headers */,
+				F4A0C36C962DDD848418896F5DA06812 /* NativeFont+BoldItalic.h in Headers */,
+				71F3BEC12D18344A825AA3A3A4D3D425 /* NSDictionary+DeepCopy.h in Headers */,
+				93172D78A4EEF93F18B7514FB1536ABC /* NSDictionary+OpenXMLDictionaryParser.h in Headers */,
+				F55D325E2F628CC6731875881EBEC4E0 /* NSDictionary+OpenXmlString.h in Headers */,
+				1FF21EB2B78264CC5BEAE4CB88A809C2 /* XlsxReaderWriter-swift-bridge.h in Headers */,
+				ADD2CDF63158D0EB91F3DE6CAB0AB01D /* XlsxReaderWriter-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FCD4582E4CF537CB0E43D000041FC12 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E4327D112EB531631539BEF6767175A /* XMLDictionary-umbrella.h in Headers */,
+				27ACD37E049C3FB3607A9A9C4BC5DD5C /* XMLDictionary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D7FE2A8EF784E2DA495754FCDBDC600 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418FE8039B6D9DFDE9E57157A8733D27 /* Pods-LocalizedCSV-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A7C89CC3E434ADFC395F96A6077E36B0 /* Pods-LocalizedCSV */ = {
+		9137C1635807AFB96F5BB125784CCF06 /* XMLDictionary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 447F74D8426A39E1632ECE46AC40B5BD /* Build configuration list for PBXNativeTarget "Pods-LocalizedCSV" */;
+			buildConfigurationList = D750C2D7DC57FF22864A8C77407D7682 /* Build configuration list for PBXNativeTarget "XMLDictionary" */;
 			buildPhases = (
-				3E20B0D0114B35842828BA706EDDC6E1 /* Sources */,
-				F649B2260FAF85303F6132243984B90B /* Frameworks */,
-				0051B87F5236A8E0A4A699B442F90BCC /* Headers */,
+				6FCD4582E4CF537CB0E43D000041FC12 /* Headers */,
+				7A67E89701CE69FA431936AB7D3E468F /* Sources */,
+				339EB30E790EE5C549A0E7721CD7593F /* Frameworks */,
+				B45E7943608254FA89AD084B8082B841 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = XMLDictionary;
+			productName = XMLDictionary;
+			productReference = C9D10D63EBB783DD714A6E9228B6EF00 /* XMLDictionary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF717B65664D59F1F03B1F2B6929C233 /* XlsxReaderWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E2D25771288F1A12177824A1058F497 /* Build configuration list for PBXNativeTarget "XlsxReaderWriter" */;
+			buildPhases = (
+				5BD4DCAFEE4D2D1527E455024EB06630 /* Headers */,
+				8360F9DA264B47E4AE0EC6A4F2158952 /* Sources */,
+				38C62A3B67B412F5DD82B1A18503CCE1 /* Frameworks */,
+				7BC95A225C8150E34E2CCC12623BEC00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15878EC2797CC469C73E4B6BCA3268D7 /* PBXTargetDependency */,
+				1BA3BE722293E9C009FF2B1D0A232B79 /* PBXTargetDependency */,
+			);
+			name = XlsxReaderWriter;
+			productName = XlsxReaderWriter;
+			productReference = 685A83783511DB53319A6A1116F3C234 /* XlsxReaderWriter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3545D1FEB003179C764A9782AEB904A /* Pods-LocalizedCSV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F90EA49A3E2DE101B7170F6E150387D /* Build configuration list for PBXNativeTarget "Pods-LocalizedCSV" */;
+			buildPhases = (
+				9D7FE2A8EF784E2DA495754FCDBDC600 /* Headers */,
+				E57173729840EBC539C9C1676CCEE544 /* Sources */,
+				D5BD54CA32375D727DB732BAE08B2DE8 /* Frameworks */,
+				D4174C340E44D82F198189AC1AC65D70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA11A47E4E1EC62793C6865018CC0771 /* PBXTargetDependency */,
+				09D85CABA511BA9C16C273695D9754A7 /* PBXTargetDependency */,
+				47C5A5BC70446D5C1501C4AECB959805 /* PBXTargetDependency */,
+			);
 			name = "Pods-LocalizedCSV";
 			productName = "Pods-LocalizedCSV";
-			productReference = B50C1287CEBA09620FFB6AA4B460EF6E /* Pods_LocalizedCSV.framework */;
+			productReference = 517CC7E710E04F04B73CC4A8A0BD86B6 /* Pods_LocalizedCSV.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71DD45731A0C2E992BAAA4464E3E17F5 /* Build configuration list for PBXNativeTarget "SSZipArchive" */;
+			buildPhases = (
+				280B455E561DAC2938C31A758457110D /* Headers */,
+				C62829C9B11A231835C65A4E0B6A796A /* Sources */,
+				D4042EA01D5561E881645ABE0B8385C8 /* Frameworks */,
+				91DF42801BB4DBB102EE05EE7B1587C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSZipArchive;
+			productName = SSZipArchive;
+			productReference = 91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 96EF82A6211A4F7C2C4B1289E24714BA /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 6D74A85788A00344E373E6FD66BBF7D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7C89CC3E434ADFC395F96A6077E36B0 /* Pods-LocalizedCSV */,
+				F3545D1FEB003179C764A9782AEB904A /* Pods-LocalizedCSV */,
+				F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */,
+				AF717B65664D59F1F03B1F2B6929C233 /* XlsxReaderWriter */,
+				9137C1635807AFB96F5BB125784CCF06 /* XMLDictionary */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		7BC95A225C8150E34E2CCC12623BEC00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91DF42801BB4DBB102EE05EE7B1587C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45E7943608254FA89AD084B8082B841 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4174C340E44D82F198189AC1AC65D70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		3E20B0D0114B35842828BA706EDDC6E1 /* Sources */ = {
+		7A67E89701CE69FA431936AB7D3E468F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				067E4D124D63EDC565584E4366FFED8A /* Pods-LocalizedCSV-dummy.m in Sources */,
+				0BE8F6479A65176CA0BFF0CD591D2245 /* XMLDictionary-dummy.m in Sources */,
+				811FEAEC841E6A07CE5F3420C0CF8B42 /* XMLDictionary.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8360F9DA264B47E4AE0EC6A4F2158952 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B22B77A169F6AE9D1A2379BDF6870F2 /* BRACalcChain.m in Sources */,
+				4229F7B53BA17DCD8F1C312527EB3AFD /* BRACalcChainCell.m in Sources */,
+				B6DD30E92669536C35FC44C2A6B15196 /* BRACell.m in Sources */,
+				C0741D7CA25E5F4EC6CF58783E574A9F /* BRACellFill.m in Sources */,
+				3E4485784A15114AAD29211110D92D9B /* BRACellFormat.m in Sources */,
+				F64085555F52285CFDB7BA26BF78292E /* BRACellRange.m in Sources */,
+				D41D494C607AC901FA86378F90D87A33 /* BRAColumn.m in Sources */,
+				F2450D16309A824BF53C74EAC5D9D719 /* BRAComment.m in Sources */,
+				E8B0B66568521028EBEE4BD249224EC6 /* BRAComments.m in Sources */,
+				9081269172D6CA1CAAFF37327B7321D7 /* BRAContentTypes.m in Sources */,
+				E81F9979A8AFF7BB0668D9CB6A5EE77B /* BRAContentTypesDefaultExtension.m in Sources */,
+				B00B3D24948C535629E6A4DE30797068 /* BRAContentTypesOverride.m in Sources */,
+				667AA0A385D5F8190E51D392DCBE7E81 /* BRADrawing.m in Sources */,
+				187FF3B50671231DCFF4B4B4D1DB60BD /* BRAElementWithRelationships.m in Sources */,
+				9BF77D60A08573F436AA06C0E8BC519F /* BRAImage.m in Sources */,
+				D75CCEC9B6B5B17355EF4F2C217A35DD /* BRAMergeCell.m in Sources */,
+				CE9CC772A4EA0095B80371135B129099 /* BRANumberFormat.m in Sources */,
+				BD5E44CA549925B31DDB9FEEECCC77C8 /* BRAOfficeDocument.m in Sources */,
+				AC21816B8F0805CF8D0A1B26F7040CEF /* BRAOfficeDocumentPackage.m in Sources */,
+				C52ECCED5B49B763DB28C87B61F2DA76 /* BRAOpenXmlElement.m in Sources */,
+				3C9492052150E6A2E7C5C49AA8151717 /* BRAOpenXmlSubElement.m in Sources */,
+				E6D5F116CEF868D9DC062DA98E721933 /* BRARelationship.m in Sources */,
+				F12D1DFA16E6D553A1C2033C11F1287B /* BRARelationships.m in Sources */,
+				D4DB5A8AF14A01D8900331DE49CE7643 /* BRARow.m in Sources */,
+				4D1194C92A1B77E887FD85E9DD1A2737 /* BRASharedString.m in Sources */,
+				4CA976726C046AAEDEB4E201C6A2462D /* BRASharedStrings.m in Sources */,
+				5B309567B4453EB3FE909B44773BA13A /* BRASheet.m in Sources */,
+				D0E1DFC025D316D72362849984E88320 /* BRAStyles.m in Sources */,
+				F408605EF2D7726E1852D0B87E10D7E3 /* BRATheme.m in Sources */,
+				9CD8623CAB935D933FB14BCC50057D1D /* BRAVmlDrawing.m in Sources */,
+				85E78858C46DFCD833B85B542984F3E8 /* BRAWorksheet.m in Sources */,
+				7FD33B8697E5165DE336A4A5D1E81DA2 /* BRAWorksheetDrawing.m in Sources */,
+				A8CAA21E66C48DD9C56119D21C835CC3 /* NativeColor+HTML.m in Sources */,
+				5FC5AFEE422D49C009B47DEF3CE186E9 /* NativeColor+OpenXML.m in Sources */,
+				93AB0C110FC9259AC8D1FD43F87236F0 /* NativeFont+BoldItalic.m in Sources */,
+				5103A2DAF4EA28F6ED91EEC41978A4CD /* NSDictionary+DeepCopy.m in Sources */,
+				C4C7D90DC5B07FE333E0B2A2D821D7A8 /* NSDictionary+OpenXMLDictionaryParser.m in Sources */,
+				0D14DB2F7B302753962054DC485E6497 /* NSDictionary+OpenXmlString.m in Sources */,
+				DF706D47800F2F5C76922076DE164361 /* XlsxReaderWriter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62829C9B11A231835C65A4E0B6A796A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB43BAB68DCBBA9D37F15BD58B7B829 /* aescrypt.c in Sources */,
+				E15273F41CCAD467621B03493A2183E9 /* aeskey.c in Sources */,
+				846E81E27ED372CDE0388DB7A7B32393 /* aestab.c in Sources */,
+				A924F2DE32FC4017AB30E179BC230A49 /* entropy.c in Sources */,
+				79312B14BD183F49C3C31FEF6A778662 /* fileenc.c in Sources */,
+				05A01D55BC34C8BD4C060A64CE58ABD0 /* hmac.c in Sources */,
+				71E7C2FCDCFD5714735D7A47E6C03B1E /* ioapi.c in Sources */,
+				5E65CB2AC62FA7F0CD227DAADD4C63C2 /* mztools.c in Sources */,
+				CC7E9C1BBFC54A8E6DF09E77906E5695 /* prng.c in Sources */,
+				9CA96F380AFDABBB23FD9837E2CF6A4A /* pwd2key.c in Sources */,
+				98113D0A3F427FFE962BE2D45C985C30 /* sha1.c in Sources */,
+				6D2F9DBC6F09305596276718D377BBE1 /* SSZipArchive-dummy.m in Sources */,
+				7EFACA2A6FB0F07CA326755440D1A1B8 /* SSZipArchive.m in Sources */,
+				72F5E1DD4A6D9F691FD335307D107946 /* unzip.c in Sources */,
+				939E077FF3801E6E3E7FEA0447DFF8A7 /* zip.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E57173729840EBC539C9C1676CCEE544 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D2B42B508CB15669A27B146827B5838 /* Pods-LocalizedCSV-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		09D85CABA511BA9C16C273695D9754A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XMLDictionary;
+			target = 9137C1635807AFB96F5BB125784CCF06 /* XMLDictionary */;
+			targetProxy = 3F8E1B9B07DD3A9BBB8F9083F6388B17 /* PBXContainerItemProxy */;
+		};
+		15878EC2797CC469C73E4B6BCA3268D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
+			targetProxy = 1D7724C7DE96F51E6559DB137AE2809D /* PBXContainerItemProxy */;
+		};
+		1BA3BE722293E9C009FF2B1D0A232B79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XMLDictionary;
+			target = 9137C1635807AFB96F5BB125784CCF06 /* XMLDictionary */;
+			targetProxy = 9F587FDC06DDF13188E882E0104E0B7F /* PBXContainerItemProxy */;
+		};
+		47C5A5BC70446D5C1501C4AECB959805 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XlsxReaderWriter;
+			target = AF717B65664D59F1F03B1F2B6929C233 /* XlsxReaderWriter */;
+			targetProxy = 9148801315A114AC485CA4708B87C132 /* PBXContainerItemProxy */;
+		};
+		EA11A47E4E1EC62793C6865018CC0771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
+			targetProxy = 43E6A7F02F399F204208DF9AE8310DBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		0B0FBAD4A205681590C093FAFBF7447E /* Release */ = {
+		1828D28B4E57EF2B770D1C916344C93E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8C5B376880F9AD7A82CA3239B530259 /* Pods-LocalizedCSV.release.xcconfig */;
+			baseConfigurationReference = 5F71539ABDA15FE2B8A13194B65AF7AF /* SSZipArchive.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSZipArchive/SSZipArchive-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULEMAP_FILE = "Target Support Files/SSZipArchive/SSZipArchive.modulemap";
+				PRODUCT_MODULE_NAME = SSZipArchive;
+				PRODUCT_NAME = SSZipArchive;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2AE0D8B39827576460938522CAB2F560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalizedCSV/Info.plist";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		30A0E385415E8E9061DC37BA40874B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C67C5C8A715C22A2F63EBD9AB72089D /* XlsxReaderWriter.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/XlsxReaderWriter/XlsxReaderWriter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XlsxReaderWriter/XlsxReaderWriter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/XlsxReaderWriter/XlsxReaderWriter.modulemap";
+				PRODUCT_MODULE_NAME = XlsxReaderWriter;
+				PRODUCT_NAME = XlsxReaderWriter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A43BFA08ECD741D50334B4FF05AA59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204B7777B79FA93A5E53BCFDF1B040EE /* XMLDictionary.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/XMLDictionary/XMLDictionary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XMLDictionary/XMLDictionary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULEMAP_FILE = "Target Support Files/XMLDictionary/XMLDictionary.modulemap";
+				PRODUCT_MODULE_NAME = XMLDictionary;
+				PRODUCT_NAME = XMLDictionary;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5AB5B8256E771392C1587705A4124257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F2EB4E949DE70C4294A781994917143 /* Pods-LocalizedCSV.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MODULEMAP_FILE = "Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LocalizedCSV;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -206,120 +1212,201 @@
 			};
 			name = Release;
 		};
-		34342BBF37D3A9ED85FF2EB654934920 /* Debug */ = {
+		816C679D58750316935F7386A438309D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		F6FC88CB717F413199C282718D2DC09F /* Release */ = {
+		B51D9EC7F3C6920B540F8C07629EF3E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5048B8C6B4691665D21327294BD7AC51 /* XlsxReaderWriter.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FE0088A4E96C5D39709FA90AC34F314F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AB73453CB8AD114E28CA343ABEAE218 /* Pods-LocalizedCSV.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LocalizedCSV/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/XlsxReaderWriter/XlsxReaderWriter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XlsxReaderWriter/XlsxReaderWriter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/XlsxReaderWriter/XlsxReaderWriter.modulemap";
+				PRODUCT_MODULE_NAME = XlsxReaderWriter;
+				PRODUCT_NAME = XlsxReaderWriter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BA882D2A1EA1A8F850AA4E6A6F5443B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F232CEFB79F1C73CDAE290B5D7485D4 /* SSZipArchive.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSZipArchive/SSZipArchive-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULEMAP_FILE = "Target Support Files/SSZipArchive/SSZipArchive.modulemap";
+				PRODUCT_MODULE_NAME = SSZipArchive;
+				PRODUCT_NAME = SSZipArchive;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BCF284701883DC28938ADA7AF04114C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F879BF0210B0F548FBA599281563473B /* XMLDictionary.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/XMLDictionary/XMLDictionary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XMLDictionary/XMLDictionary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULEMAP_FILE = "Target Support Files/XMLDictionary/XMLDictionary.modulemap";
+				PRODUCT_MODULE_NAME = XMLDictionary;
+				PRODUCT_NAME = XMLDictionary;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB90F1B34C9725A5404BD293B855B27F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6C995B7A6D7870A5149662EC554D439 /* Pods-LocalizedCSV.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MODULEMAP_FILE = "Target Support Files/Pods-LocalizedCSV/Pods-LocalizedCSV.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LocalizedCSV;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -330,25 +1417,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		2F90EA49A3E2DE101B7170F6E150387D /* Build configuration list for PBXNativeTarget "Pods-LocalizedCSV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				34342BBF37D3A9ED85FF2EB654934920 /* Debug */,
-				F6FC88CB717F413199C282718D2DC09F /* Release */,
+				CB90F1B34C9725A5404BD293B855B27F /* Debug */,
+				5AB5B8256E771392C1587705A4124257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		447F74D8426A39E1632ECE46AC40B5BD /* Build configuration list for PBXNativeTarget "Pods-LocalizedCSV" */ = {
+		3E2D25771288F1A12177824A1058F497 /* Build configuration list for PBXNativeTarget "XlsxReaderWriter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE0088A4E96C5D39709FA90AC34F314F /* Debug */,
-				0B0FBAD4A205681590C093FAFBF7447E /* Release */,
+				30A0E385415E8E9061DC37BA40874B4D /* Debug */,
+				B51D9EC7F3C6920B540F8C07629EF3E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				816C679D58750316935F7386A438309D /* Debug */,
+				2AE0D8B39827576460938522CAB2F560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71DD45731A0C2E992BAAA4464E3E17F5 /* Build configuration list for PBXNativeTarget "SSZipArchive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1828D28B4E57EF2B770D1C916344C93E /* Debug */,
+				BA882D2A1EA1A8F850AA4E6A6F5443B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D750C2D7DC57FF22864A8C77407D7682 /* Build configuration list for PBXNativeTarget "XMLDictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF284701883DC28938ADA7AF04114C5 /* Debug */,
+				5A43BFA08ECD741D50334B4FF05AA59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

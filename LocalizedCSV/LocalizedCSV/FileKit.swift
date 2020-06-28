@@ -75,15 +75,15 @@ class FileKit {
         return path;
     }
     
-    static func getFile(fileType:String) -> String {
+    static func getFile(fileTypes:Array<String>) -> String {
         let openPannel = NSOpenPanel()
-        openPannel.allowedFileTypes = [fileType]
+        openPannel.allowedFileTypes = fileTypes
         openPannel.canChooseFiles = true
         openPannel.canChooseDirectories = false
         guard openPannel.runModal() == NSApplication.ModalResponse.OK else {
             return ""
         }
-        return openPannel.urls.first?.absoluteString.replacingOccurrences(of: "file://", with: "") ?? ""
+        return openPannel.urls.first?.absoluteString.removingPercentEncoding?.replacingOccurrences(of: "file://", with: "") ?? ""
     }
     
     /// 判断一个文件后缀是不是指定的后缀
