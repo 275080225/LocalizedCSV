@@ -64,13 +64,7 @@ class CSVParseKit {
         guard spreadsheet.workbook != nil, spreadsheet.workbook.sheets.count>0 else {
             return
         }
-        let sheet: BRASheet = spreadsheet.workbook.sheets[0] as! BRASheet
         let worksheet: BRAWorksheet = spreadsheet.workbook.worksheets[0] as! BRAWorksheet
-        let cell: BRACell = worksheet.cell(forCellReference: "A1")
-        
-        // Print some info to show the code works.
-        print(sheet.name) // print "Sheet1"
-        print(cell.stringValue()) // print "Alpha"
         
         guard worksheet.rows.count > 1 else {
             throw CSVParseKitError.fileError

@@ -47,6 +47,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         FilndUnLocalizeStringKit().findAll()
     }
     
+    @IBAction func exportToExcel(_ sender: Any) {
+        
+    }
+    
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         for window in sender.windows {
             window.makeKeyAndOrderFront(nil)

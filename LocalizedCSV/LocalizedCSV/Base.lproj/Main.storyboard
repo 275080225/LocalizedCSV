@@ -372,6 +372,12 @@
                                                 <segue destination="BcW-aW-QFn" kind="modal" id="JZD-f3-Tz5"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="导出多语言到Excel" keyEquivalent="E" id="LjC-4R-k7i">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="exportToExcel:" target="Voe-Tx-rLC" id="bxv-6A-h3k"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -1106,18 +1112,18 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tJh-nT-MNd">
-                                <rect key="frame" x="10" y="395" width="361" height="21"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="输入SVG路径" drawsBackground="YES" id="ZDF-iD-wBf">
+                                <rect key="frame" x="10" y="395" width="355" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="需要导入的多语言表路径" drawsBackground="YES" id="ZDF-iD-wBf">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FDh-aF-YHm">
-                                <rect key="frame" x="395" y="388" width="123" height="32"/>
-                                <buttonCell key="cell" type="push" title="选取CSV文件" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JFU-np-hSZ">
+                                <rect key="frame" x="389" y="388" width="129" height="32"/>
+                                <buttonCell key="cell" type="push" title="选取Excel文件" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JFU-np-hSZ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="readCSVFile:" target="XfG-lQ-9wD" id="wLs-lM-Y6e"/>

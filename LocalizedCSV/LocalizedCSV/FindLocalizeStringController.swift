@@ -44,7 +44,6 @@ class FindLocalizeStringController: NSViewController, NSTableViewDataSource {
         findKit.updateCompletion = { key, value in
             DispatchQueue.main.async {
                 self.keys.append(key)
-                self.tableView.reloadData()
                 self.countLabel.stringValue = "\(self.keys.count)"
             }
         }
@@ -52,6 +51,7 @@ class FindLocalizeStringController: NSViewController, NSTableViewDataSource {
             FindLocalizeStringKit.shareManager().findAllLocalizeString(path: path)
             DispatchQueue.main.async {
                 self.stateLabel.stringValue = "✅查询完毕"
+                self.tableView.reloadData()
                 if FindLocalizeStringKit.shareManager().exitSameKeyList.keys.count > 0 {
                     let alert = NSAlert()
                     var message = "以下Key 存在多个值可能造成程序运行问题\n"
