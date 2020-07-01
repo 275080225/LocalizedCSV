@@ -354,10 +354,14 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             fixSource = fixSource.trimmingCharacters(in: CharacterSet.newlines)
             
             fixSource = fixSource.replacingOccurrences(of: "\n", with: "\\n")
+            
+            fixSource = fixSource.replacingOccurrences(of: "\\ \"", with: "{T}")
             /* 将\" 临时替换为 {T} */
             fixSource = fixSource.replacingOccurrences(of: "\\\"", with: "{T}")
             /* 修复其他" */
-            fixSource = fixSource.replacingOccurrences(of: "\"", with: "")
+            fixSource = fixSource.replacingOccurrences(of: "\"\\", with: "{T}")
+            fixSource = fixSource.replacingOccurrences(of: "\"", with: "{T}")
+            
             fixSource = fixSource.replacingOccurrences(of: "{T}", with: "\\\"")
             var append = "\"\(key)\" = \"\(fixSource)\";\n"
             append = append.replacingOccurrences(of: "\r", with: "")
